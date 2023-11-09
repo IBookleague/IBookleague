@@ -10,8 +10,4 @@ public class IbookleagueApplication {
 		SpringApplication.run(IbookleagueApplication.class, args);
 	}
 }
-<<<<<<< HEAD
 
-// github_test
-=======
->>>>>>> cc86f38450abd4de0887571a5b9f4f06d8712d03
