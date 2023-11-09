@@ -2,10 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-<<<<<<< HEAD
-=======
-      <profile default="true" name="Default" enabled="true" />
->>>>>>> ce0af0d073e052f48b5655196216dbe42c03b840
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
