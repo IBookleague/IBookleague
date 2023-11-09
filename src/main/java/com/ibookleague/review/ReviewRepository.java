@@ -1,6 +1,6 @@
 package com.ibookleague.review;
 
-import com.ibookleague.review.Review;
+import com.ibookleague.review.domain.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ReviewRepository extends JpaRepository<Review, Integer> {

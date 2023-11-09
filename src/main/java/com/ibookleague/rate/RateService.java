@@ -1,6 +1,7 @@
 package com.ibookleague.rate;
 
-import com.ibookleague.book.Book;
+import com.ibookleague.book.domain.Book;
+import com.ibookleague.rate.domain.Rate;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,11 +1,8 @@
 package com.ibookleague.foreign_rate;
 
 
-import com.ibookleague.book.Book;
-import com.ibookleague.book.BookService;
-import com.ibookleague.foreignbook.ForeignBook;
 import com.ibookleague.foreignbook.ForeignBookService;
-import com.ibookleague.rate.RateService;
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

@@ -1,12 +1,8 @@
 package com.ibookleague.foreign_review;
 
 
-import com.ibookleague.book.Book;
-import com.ibookleague.foreign_rate.ForeignRateRepository;
-import com.ibookleague.foreignbook.ForeignBook;
-import com.ibookleague.foreignbook.ForeignBookRepository;
-import com.ibookleague.review.Review;
-import com.ibookleague.review.ReviewRepository;
+import com.ibookleague.foreign_review.domain.ForeignReview;
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

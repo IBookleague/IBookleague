@@ -1,6 +1,7 @@
 package com.ibookleague.foreignbook;
 
 
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
-import com.ibookleague.foreignbook.ForeignBookService;
-import com.ibookleague.book.Book;
 import java.util.List;
 
 @RequestMapping("/ibookleague/foreignbook")

@@ -1,7 +1,8 @@
 package com.ibookleague.review;
 
 
-import com.ibookleague.book.Book;
+import com.ibookleague.book.domain.Book;
+import com.ibookleague.review.domain.Review;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

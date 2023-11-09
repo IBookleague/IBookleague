@@ -1,13 +1,15 @@
 package com.ibookleague.rate;
 
 
-import com.ibookleague.book.Book;
 import com.ibookleague.book.BookService;
+import com.ibookleague.book.domain.Book;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/ibookleague/book/rate")
 @RequiredArgsConstructor

@@ -1,8 +1,8 @@
 package com.ibookleague;
 
-import com.ibookleague.book.Book;
+import com.ibookleague.book.domain.Book;
 import com.ibookleague.book.BookRepository;
-import com.ibookleague.foreignbook.ForeignBook;
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import com.ibookleague.foreignbook.ForeignBookRepository;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

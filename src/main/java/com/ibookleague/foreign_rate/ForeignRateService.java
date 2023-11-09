@@ -1,10 +1,8 @@
 package com.ibookleague.foreign_rate;
 
 
-import com.ibookleague.foreignbook.ForeignBook;
-import com.ibookleague.foreignbook.ForeignBookRepository;
-import com.ibookleague.rate.Rate;
-import com.ibookleague.rate.RateRepository;
+import com.ibookleague.foreign_rate.domain.ForeignRate;
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

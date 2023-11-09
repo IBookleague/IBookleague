@@ -1,5 +1,6 @@
 package com.ibookleague.book;
 
+import com.ibookleague.book.domain.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,11 +1,11 @@
 package com.ibookleague.foreignbook;
 
 
-import com.ibookleague.book.DataFoundException;
+import com.ibookleague.book.exception.DataFoundException;
+import com.ibookleague.foreignbook.domain.ForeignBook;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import com.ibookleague.foreignbook.ForeignBookRepository;
-import com.ibookleague.foreignbook.ForeignBook;
+
 import java.util.List;
 import java.util.Optional;
 
