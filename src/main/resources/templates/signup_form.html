@@ -25,7 +25,6 @@
                 <div class = "mb-2">
                     <form th:action="@{/ibookleague/user/signup}" th:object="${userCreateForm}" method="POST">
 
-<<<<<<< HEAD
                     <div th:replace="~{form_errors:: formErrorsFragment}"></div>
                         <div class="mb-3">
                             <label class="form-label text-white">Email Address</label>
@@ -42,24 +41,6 @@
                         <div class="mb-3">
                             <label class="form-label text-white">Password Confirm</label>
                             <input type="password" th:field="*{password2}" class="form-control" name="password2">
-=======
-<!--                    <div th:replace="~{form_errors:: formErrorsFragment}"></div>-->
-                        <div class="mb-3">
-                            <label class="form-label text-white">Email Address</label>
-                            <input type="email" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Username</label>
-                            <input type="text" class="form-control" name="text">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Password</label>
-                            <input type="password" class="form-control" name="password1">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Password Confirm</label>
-                            <input type="password" class="form-control" name="password2">
->>>>>>> ce0af0d073e052f48b5655196216dbe42c03b840
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

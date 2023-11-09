@@ -23,11 +23,8 @@
 
                 <div class = "mb-2">
                     <form th:action="@{/ibookleague/user/login}" method="POST">
-<<<<<<< HEAD
+
 <!--                        <input type="hidden" th:name="${_csrf?.parameterName}" th:value="${_csrf?.token}" />-->
-=======
-                        <input type="hidden" th:name="${_csrf?.parameterName}" th:value="${_csrf?.token}" />
->>>>>>> ce0af0d073e052f48b5655196216dbe42c03b840
                         <div th:if="${param.error}">
                             <p class="alert alert-danger">
                                 사용자ID 또는 비밀번호를 확인해 주세요.
@@ -35,19 +32,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label text-white">Email address</label>
-<<<<<<< HEAD
                             <input type="text" class="form-control" id="email" name="email">
                         </div>
                         <div class="mb-3">
                             <label class="form-label text-white">Password</label>
                             <input type="password" class="form-control" id="password" name="password">
-=======
-                            <input type="email" class="form-control" name="username">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Password</label>
-                            <input type="password" class="form-control" name="password">
->>>>>>> ce0af0d073e052f48b5655196216dbe42c03b840
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
