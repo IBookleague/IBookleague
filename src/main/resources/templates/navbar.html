@@ -19,7 +19,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/ibookleague/user/signup">회원가입</a>
+                    <a class="nav-link text-light" sec:authorize="isAnonymous()" th:href="@{/ibookleague/user/signup}">회원가입</a>
                 </li>
 
 <!--                <li class="nav-item dropdown">-->
