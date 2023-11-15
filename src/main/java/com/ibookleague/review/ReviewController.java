@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@RequestMapping("/ibookleague/review")
 @RequiredArgsConstructor
 @Controller
 public class ReviewController {
@@ -19,7 +18,7 @@ public class ReviewController {
     private final BookService bookService;
     private final ReviewService reviewService;
 
-    @PostMapping("/create/{id}")
+    @PostMapping("/ibookleague/review/create/{id}")
     public String createReview(Model model, @PathVariable("id") Integer id, @RequestParam String content)
     {
         Book book = this.bookService.getBook(id);

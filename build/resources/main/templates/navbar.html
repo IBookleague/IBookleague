@@ -8,6 +8,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
+                    <a class="nav-link text-light" href="/ibookleague/book/raking">문학랭킹</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-light" href="/ibookleague/book/list">한국문학리스트</a>
                 </li>
                 <li class="nav-item">
@@ -19,7 +22,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="/ibookleague/user/signup">회원가입</a>
+                    <a class="nav-link text-light" sec:authorize="isAnonymous()" th:href="@{/ibookleague/user/signup}">회원가입</a>
                 </li>
 
 <!--                <li class="nav-item dropdown">-->

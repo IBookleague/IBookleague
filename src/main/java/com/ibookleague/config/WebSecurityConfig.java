@@ -21,7 +21,11 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
-                        .requestMatchers(new AntPathRequestMatcher("/**")).permitAll())
+                        .requestMatchers(new AntPathRequestMatcher("/ibookleague/foreignbook/rate/create/**")).authenticated()
+                        .requestMatchers(new AntPathRequestMatcher("/ibookleague/foreignreview/create/**")).authenticated()
+                        .requestMatchers(new AntPathRequestMatcher("/ibookleague/review/create/**")).authenticated()
+                        .requestMatchers(new AntPathRequestMatcher("/ibookleague/book/rate/create/**")).authenticated()
+                        .anyRequest().permitAll())
                 .csrf((csrf) -> csrf
                         .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**")))
                 .headers((headers) -> headers
@@ -29,12 +33,13 @@ public class WebSecurityConfig {
                                 XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
                 .formLogin((formLogin) -> formLogin
                         .loginPage("/ibookleague/user/login")
+                        .permitAll()
                         .defaultSuccessUrl("/ibookleague"))
                 .logout((logout) -> logout
                         .logoutRequestMatcher(new AntPathRequestMatcher("/ibookleague/user/logout"))
                         .logoutSuccessUrl("/ibookleague")
                         .invalidateHttpSession(true))
-        ;
+                ;
         return http.build();
     }
 

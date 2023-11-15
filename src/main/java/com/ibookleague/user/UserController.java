@@ -60,6 +60,7 @@ public class UserController {
     public String login(){
         return "login";
     }
+
     @GetMapping("/signup_success")
     public String signup_success(@RequestParam(name = "error", required = false) String error, Model model) {
         return "signup_success";

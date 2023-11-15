@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@RequestMapping("/ibookleague/foreignreview")
 @RequiredArgsConstructor
 @Controller
 public class ForeignReviewController {
@@ -19,7 +18,7 @@ public class ForeignReviewController {
     private final ForeignBookService foreignBookService;
     private final ForeignReviewService foreignReviewService;
 
-    @PostMapping("/create/{id}")
+    @PostMapping("/ibookleague/foreignreview/create/{id}")
     public String createReview(Model model, @PathVariable("id") Integer id, @RequestParam String content)
     {
         ForeignBook foreignbook = this.foreignBookService.getBook(id);

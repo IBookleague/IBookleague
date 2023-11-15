@@ -19,7 +19,7 @@ public class RateController {
     private final BookService bookService;
     private final RateService rateService;
 
-    @PostMapping("/create/{id}")
+    @PostMapping("/ibookleague/book/rate/create/{id}")
     public String createRate(Model model, @PathVariable("id") Integer id, HttpServletRequest request)
     {
         Book book = this.bookService.getBook(id);
