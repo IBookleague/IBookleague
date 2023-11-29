@@ -29,8 +29,6 @@ public class Book {
     @OneToMany(mappedBy = "book", cascade = CascadeType.REMOVE)
     private List<Rate> rateList;
 
-
-
     @OneToMany(mappedBy = "book", cascade = CascadeType.REMOVE)
     private List<Review> reviewList;
 }

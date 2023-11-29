@@ -22,10 +22,11 @@ public class Rate {
 
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     @ManyToOne
     private Book book;
 
-    @OneToOne
-    private User user;
+    private Long user;
 
 }
