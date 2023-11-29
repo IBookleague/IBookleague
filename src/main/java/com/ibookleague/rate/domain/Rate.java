@@ -1,11 +1,13 @@
 package com.ibookleague.rate.domain;
 
 import com.ibookleague.book.domain.Book;
+import com.ibookleague.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -22,5 +24,8 @@ public class Rate {
 
     @ManyToOne
     private Book book;
+
+    @OneToOne
+    private User user;
 
 }

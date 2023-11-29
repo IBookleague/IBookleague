@@ -16,13 +16,14 @@
     </div>
 
     <div class="my-3"></div>
-
     <!-- 별접 입력 -->
     <div class="d-flex justify-content-center">
         <h5 class="text-light" th:text="|별점을 선택해주세요|"></h5>
     </div>
+
     <div class="d-flex justify-content-center" style="white-space: pre-line;">
-        <form th:action="@{|/ibookleague/book/rate/create/${book.id}|}" method="post">
+        <form th:action="@{|/ibookleague/book/rate/create/${book.id}|}" method="post" id="rateForm">
+
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                 <input type="radio" class="btn-check" name="rate" id="rate1" value="1" autocomplete="off">
                 <label class="btn btn-outline-primary" for="rate1">1</label>
@@ -40,23 +41,15 @@
                 <label class="btn btn-outline-primary" for="rate5">5</label>
 
             </div>
+
             <div class="d-flex justify-content-center">
+
                 <input type="submit" value="별점등록" class="btn btn-primary my-2">
             </div>
         </form>
     </div>
 
 
-
-    <!--        <select class="form-select" name="rate" id="rate">-->
-<!--                <option selected>Choose Rate</option>-->
-<!--                <option value="1">1</option>-->
-<!--                <option value="2">2</option>-->
-<!--                <option value="3">3</option>-->
-<!--                <option value="4">4</option>-->
-<!--                <option value="5">5</option>-->
-<!--            </select>-->
-<!--            <input type="submit" value="별점등록" class="btn btn-primary my-2">-->
 
     <!-- 별점 갯수 표시 -->
     <h5 class="border-bottom my-3 py-2 text-light" th:text="|${#lists.size(book.rateList)}개의 별점이 있습니다.|"></h5>
@@ -83,6 +76,23 @@
 
     </form>
 
-
 </div>
+
+<!-- 경고 메시지 표시 부분 -->
+<script layout:fragment="script" type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        // 경고 메시지를 서버에서 받아옴
+        var warningMessage = '!!! 같은 사용자는 한 번만 평점을 입력할 수 있습니다 !!!';
+        var form = document.getElementById('rateForm')
+
+        // warningMessage가 비어있지 않다면 JavaScript 이벤트 리스너를 추가
+        if (warningMessage && form) {
+            // 경고 메시지 표시
+            form.addEventListener('submit', function ()
+                {
+                    alert(warningMessage);
+                });
+        }
+    });
+</script>
 </html>
