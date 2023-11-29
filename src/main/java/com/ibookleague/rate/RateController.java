@@ -62,6 +62,7 @@ public class RateController {
 
     // 이미 평점에 대해서는 사용자가 일대일 대응이 되어 있음.
     // id -> 평점 id
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/modify/{id}")
     public String rateModify(HttpServletRequest request,  @PathVariable("id") Integer id)
     {

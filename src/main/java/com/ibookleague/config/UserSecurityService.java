@@ -34,6 +34,6 @@ public class UserSecurityService implements UserDetailsService {
         } else {
             authorities.add(new SimpleGrantedAuthority(UserRole.USER.getValue()));
         }
-        return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
+        return new CustomUserDetails(user.getEmail(), user.getPassword(), authorities, user.getUserId());
     }
 }
