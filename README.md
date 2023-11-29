@@ -1,7 +1,6 @@
 # IBookLeague_Booklist
 
 11.29 Update
-- Rate 와 User 관계 OneToOne 수정
 - 같은 사용자가 두번 이상 평점을 입력하려고 할 때 자바스크립트로 warninig 표시
 
   
