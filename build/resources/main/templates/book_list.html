@@ -15,7 +15,7 @@
             <th>번호</th>
             <th>제목</th>
             <th>저자</th>
-<!--            <th>삭제</th>-->
+            <th>퍙점 평균</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +25,7 @@
                 <a th:href="@{|/ibookleague/book/detail/${book.id}|}" th:text="${book.subject}"></a>
             </td>
             <td class="text-light" th:text="${book.author}"></td>
+            <td class="text-light" th:text="${book.calculateAvg()}"></td>
 <!--            <td href="javascript:void(0);" th:data-uri="@{|/ibookleague/book/delete/${book.id}|}"-->
 <!--                class="delete btn btn-sm btn-outline-secondary" th:text="삭제"></td>-->
         </tr>

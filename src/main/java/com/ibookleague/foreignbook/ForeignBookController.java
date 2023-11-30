@@ -1,6 +1,7 @@
 package com.ibookleague.foreignbook;
 
 
+import com.ibookleague.book.domain.Book;
 import com.ibookleague.foreignbook.domain.ForeignBook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @RequestMapping("/ibookleague/foreignbook")
@@ -27,6 +30,7 @@ public class ForeignBookController
     public String list(Model model)
     {
         List<ForeignBook> foreignBookList = this.foreignBookService.getList();
+        Collections.sort(foreignBookList, Comparator.comparing(ForeignBook::calculateAvg).reversed());
         model.addAttribute("foreignBookList", foreignBookList);
         return "foreign_book_list";
     }

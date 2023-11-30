@@ -20,6 +20,10 @@ public class ForeignRate {
 
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     @ManyToOne
     private ForeignBook foreignBook;
+
+    private Long user;
 }

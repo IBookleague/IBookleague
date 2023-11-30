@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @RequestMapping("/ibookleague/book")
@@ -26,6 +28,7 @@ public class BookController
     public String list(Model model)
     {
         List<Book> bookList = this.bookService.getList();
+        Collections.sort(bookList, Comparator.comparing(Book::calculateAvg).reversed());
         model.addAttribute("bookList", bookList);
         return "book_list";
     }

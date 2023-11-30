@@ -2,6 +2,7 @@ package com.ibookleague.foreignbook.domain;
 
 import com.ibookleague.foreign_rate.domain.ForeignRate;
 import com.ibookleague.foreign_review.domain.ForeignReview;
+import com.ibookleague.rate.domain.Rate;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,6 +29,16 @@ public class ForeignBook {
 
     @OneToMany(mappedBy = "foreignBook", cascade = CascadeType.REMOVE)
     private List<ForeignRate> rateList;
+
+    public Double calculateAvg()
+    {
+        if(rateList == null || rateList.isEmpty()) { return 0.0; }
+        Integer sum = 0;
+        for(ForeignRate foreignRate:rateList) { sum += foreignRate.getRate(); }
+
+        double average = (double) sum / rateList.size();
+        return Math.round(average * 10.0) / 10.0;
+    }
 
     @OneToMany(mappedBy = "foreignBook", cascade = CascadeType.REMOVE)
     private List<ForeignReview> reviewList;
