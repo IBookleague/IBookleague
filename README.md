@@ -9,5 +9,6 @@
 
 11.30 Update
 - 해외문학에도 적용 완료
+- url 변경 list -> ranking
   
 DB Rate, User Table 한번 밀고 해야 할 듯
