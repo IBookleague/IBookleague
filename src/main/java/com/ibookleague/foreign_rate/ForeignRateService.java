@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -52,4 +53,7 @@ public class ForeignRateService {
         return existingRate.isPresent();
     }
 
+    public List<ForeignRate> getRateByUserId(Long userId) {
+        return foreignRateRepository.findForeignRatesByUser(userId);
+    }
 }
