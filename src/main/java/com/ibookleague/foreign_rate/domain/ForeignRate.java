@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 public class ForeignRate {
+    private static String[] a = {"★", "★★", "★★★", "★★★★", "★★★★★"};
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +27,8 @@ public class ForeignRate {
     private ForeignBook foreignBook;
 
     private Long user;
+    
+    public String getStar() {
+        return a[rate - 1];
+    }
 }

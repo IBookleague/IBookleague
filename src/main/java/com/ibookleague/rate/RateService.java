@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -50,4 +51,7 @@ public class RateService {
         return existingRate.isPresent();
     }
 
+    public List<Rate> getRateByUserId(Long userId) {
+        return rateRepository.findRatesByUser(userId);
+    }
 }

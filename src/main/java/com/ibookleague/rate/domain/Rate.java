@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @Entity
 public class Rate {
+    private static String[] a = {"★", "★★", "★★★", "★★★★", "★★★★★"};
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,4 +30,7 @@ public class Rate {
 
     private Long user;
 
+    public String getStar() {
+        return a[rate - 1];
+    }
 }

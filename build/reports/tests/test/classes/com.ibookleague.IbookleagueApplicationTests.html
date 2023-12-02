@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,11 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
+<<<<<<< HEAD
 <div class="counter">0.909s</div>
+=======
+<div class="counter">1.165s</div>
+>>>>>>> 81b2692797df72a9253e9a468519b16a47aceb6a
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +83,16 @@
 </thead>
 <tr>
 <td class="success">testForeign()</td>
+<<<<<<< HEAD
 <td class="success">0.909s</td>
+=======
+<td class="success">0.957s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testKorean()</td>
+<td class="success">0.208s</td>
+>>>>>>> 81b2692797df72a9253e9a468519b16a47aceb6a
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +100,13 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
+<<<<<<< HEAD
 <pre>16:03:36.082 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ibookleague.IbookleagueApplicationTests]: IbookleagueApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
 16:03:36.165 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ibookleague.IbookleagueApplication for test class com.ibookleague.IbookleagueApplicationTests
+=======
+<pre>18:51:52.337 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ibookleague.IbookleagueApplicationTests]: IbookleagueApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:51:52.427 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ibookleague.IbookleagueApplication for test class com.ibookleague.IbookleagueApplicationTests
+>>>>>>> 81b2692797df72a9253e9a468519b16a47aceb6a
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -98,6 +116,7 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
+<<<<<<< HEAD
 2023-12-02T16:03:36.417+09:00  INFO 5027 --- [    Test worker] c.i.IbookleagueApplicationTests          : Starting IbookleagueApplicationTests using Java 17.0.9 with PID 5027 (started by suyeon in /Users/suyeon/Desktop/github_main/IBookleague)
 2023-12-02T16:03:36.418+09:00  INFO 5027 --- [    Test worker] c.i.IbookleagueApplicationTests          : No active profile set, falling back to 1 default profile: &quot;default&quot;
 2023-12-02T16:03:36.966+09:00  INFO 5027 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -131,6 +150,380 @@
 
 1탄 《해리포터와 마법사의 돌》
 어둠의 마왕 볼드모트에게 부모를 잃고 홀로 살아남은 아이, 해리는 안전을 위해 마법사가 아닌 사람인 ‘머글’ 페투니아 이모와 버논 이모부 손에 길러지며 불우한 어린 시절을 보낸다. 열한 번째 생일날, 해그리드를 통해 자신이 마법사라는 사실을 알게 된 해리는 호그와트 마법학교에 입학해 헤르미온느 그레인저, 론 위즐리라는 친구들과 함께 영생을 주는 마법사의 돌을 찾는 엄청난 모험을 시작하게 된다.
+=======
+2023-12-01T18:51:52.631+09:00  INFO 18848 --- [    Test worker] c.i.IbookleagueApplicationTests          : Starting IbookleagueApplicationTests using Java 17.0.9 with PID 18848 (started by w in /Users/w/Downloads/ibookleague)
+2023-12-01T18:51:52.632+09:00  INFO 18848 --- [    Test worker] c.i.IbookleagueApplicationTests          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-12-01T18:51:53.081+09:00  INFO 18848 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-01T18:51:53.114+09:00  INFO 18848 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 7 JPA repository interfaces.
+2023-12-01T18:51:53.365+09:00  INFO 18848 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-01T18:51:53.396+09:00  INFO 18848 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-01T18:51:53.397+09:00  INFO 18848 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-01T18:51:53.510+09:00  INFO 18848 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-01T18:51:53.523+09:00  INFO 18848 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T18:51:53.638+09:00  INFO 18848 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~/local user=SA
+2023-12-01T18:51:53.639+09:00  INFO 18848 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T18:51:53.652+09:00  WARN 18848 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-01T18:51:54.114+09:00  INFO 18848 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-01T18:51:54.149+09:00  INFO 18848 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-01T18:51:54.436+09:00  WARN 18848 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-01T18:51:54.519+09:00  INFO 18848 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@650997b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7337f87e, org.springframework.security.web.context.SecurityContextHolderFilter@fdfd984, org.springframework.security.web.header.HeaderWriterFilter@5e528476, org.springframework.security.web.csrf.CsrfFilter@7680beac, org.springframework.security.web.authentication.logout.LogoutFilter@6bbd4048, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@62818ab0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72e5206, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23d0f6be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77e24d3c, org.springframework.security.web.access.ExceptionTranslationFilter@4117e0c9, org.springframework.security.web.access.intercept.AuthorizationFilter@30b0f674]
+2023-12-01T18:51:54.669+09:00  INFO 18848 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-12-01T18:51:54.783+09:00  INFO 18848 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-12-01T18:51:54.826+09:00  INFO 18848 --- [    Test worker] c.i.IbookleagueApplicationTests          : Started IbookleagueApplicationTests in 2.328 seconds (process running for 2.942)
+1작품명 : 개정 번역판 | 해리 포터와 마법사의 돌      작가명 : 조앤.K.롤링
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+2작품명 : 파친코 1      작가명 : 이민진
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+3작품명 : 빨강, 파랑, 어쨌든 찬란      작가명 : 케이시 맥퀴스턴
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+4작품명 : 프로젝트 헤일메리      작가명 : 앤디 위어
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+5작품명 : 가재가 노래하는 곳      작가명 : 델리아 오언스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+6작품명 : 폭풍의 언덕      작가명 : 에밀리 제인 브론테
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+7작품명 : 문예춘추사 셜록 홈즈 전집 세트      작가명 : 아서 코난 도일
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+8작품명 : 동급생      작가명 : 프레드 울만
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+9작품명 : 미키7      작가명 : 에드워드 애슈턴
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+10작품명 : 하우스 메이드      작가명 : 프리다 맥파든
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+11작품명 : 합본 | 해리포터와 저주받은 아이 1,2부      작가명 : 조앤.K.롤링
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+12작품명 : 추운 나라에서 돌아온 스파이      작가명 : 존 르 카레
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+13작품명 : 맡겨진 소녀      작가명 : 클레어 키건
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+14작품명 : 변론의 법칙      작가명 : 마이클 코넬리
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+15작품명 : 기억 전달자      작가명 : 로이스 로리
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+16작품명 : 파운데이션 1 - 파운데이션      작가명 : 아이작 아시모프
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+17작품명 : 오만과 편견      작가명 : 제인 오스틴
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+18작품명 : 1984      작가명 : 조지 오웰
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+19작품명 : 지킬 박사와 하이드      작가명 : 로버트 루이스 스티븐슨
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+20작품명 : 테라피스트      작가명 : B. A. 패리스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+21작품명 : 백만장자를 위한 공짜 음식1      작가명 : 이민진
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+22작품명 : 변신      작가명 : 프란츠 카프카
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+23작품명 : 링컨 하이웨이      작가명 : 에이모 토울스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+24작품명 : 잃어버린 것들의 책      작가명 : 존 코널리
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+25작품명 : 프랑켄슈타인      작가명 : 메리 셸리
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+26작품명 : 핏빛 자오선      작가명 : 코맥 매카시
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+27작품명 : 비하인드 도어      작가명 : B. A. 패리스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+28작품명 : 욕망이라는 이름의 전차      작가명 : 테네시 윌리엄스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+29작품명 : 올리브 키터리지      작가명 : 엘리자베스 스트라우트
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+30작품명 : AFTER 애프터 1. 치명적인 남자      작가명 : 안나 토드
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+31작품명 : 스켈레톤 크루 (상)      작가명 : 스티븐 킹
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+32작품명 : 앨저넌에게 꽃을      작가명 : 대니얼 키스
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+33작품명 : 워더링 하이츠      작가명 : 에밀리 제인 브론테
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+34작품명 : 어딘가 상상도 못 할 곳에, 수많은 순록 떼가      작가명 : 켄 리우
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+35작품명 : 작은 것들의 신      작가명 : 아룬다티 로이
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+36작품명 : 디아블로: 죄악의 전쟁 1권      작가명 : 리차드 A. 나크
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+37작품명 : 카탈로니아 찬가      작가명 : 조지 오웰
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+38작품명 : 걸리버 여행기      작가명 : 조너선 스위프트
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+39작품명 : 스티븐 킹 걸작선 05 - 스티븐킹 단편집 (옥수수 밭의 아이들 외)      작가명 : 스티븐 킹
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+40작품명 : 서머싯 몸 단편선 1      작가명 : 서머셋 모옴
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+41작품명 : 스티븐 킹 걸작선 1 - 캐리      작가명 : 스티븐 킹
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+42작품명 : 높은 성의 사내      작가명 : 필립 킨 드레드 딕
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+43작품명 : 햄릿      작가명 : 윌리엄 셰익스피어
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+44작품명 : 누가 이 침대를 쓰고 있었든      작가명 : 레이먼드 카버
+Hibernate: 
+    insert 
+    into
+        foreign_book
+        (author,content,subject,id) 
+    values
+        (?,?,?,default)
+1작품명 : 아버지의 해방일지      작가명 : 정지아
+>>>>>>> 81b2692797df72a9253e9a468519b16a47aceb6a
 Hibernate: 
     insert 
     into
@@ -877,7 +1270,11 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
+<<<<<<< HEAD
 <a href="http://www.gradle.org">Gradle 8.3</a> at 2023. 12. 2. 오후 4:03:40</p>
+=======
+<a href="http://www.gradle.org">Gradle 8.3</a> at 2023. 12. 1. 오후 6:51:56</p>
+>>>>>>> 81b2692797df72a9253e9a468519b16a47aceb6a
 </div>
 </div>
 </body>

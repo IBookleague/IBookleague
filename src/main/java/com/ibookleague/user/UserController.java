@@ -1,9 +1,15 @@
 package com.ibookleague.user;
 
+import com.ibookleague.foreign_rate.ForeignRateService;
+import com.ibookleague.foreign_rate.domain.ForeignRate;
+import com.ibookleague.rate.RateService;
+import com.ibookleague.rate.domain.Rate;
+import com.ibookleague.user.domain.User;
 import com.ibookleague.user.dto.UserCreateForm;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,12 +18,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Controller
 @RequestMapping("/ibookleague/user")
 public class UserController {
 
     private final UserService userService;
+    private final ForeignRateService foreignRateService;
+    private final RateService rateService;
 
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
@@ -64,7 +74,17 @@ public class UserController {
     @GetMapping("/signup_success")
     public String signup_success(@RequestParam(name = "error", required = false) String error, Model model) {
         return "signup_success";
+    }
 
+    @GetMapping("/mypage")
+    public String myPage(Model model, Authentication authentication) {
+        User user = userService.getUser(authentication.getName());
+        List<Rate> rates = rateService.getRateByUserId(user.getUserId());
+        List<ForeignRate> foreignRates = foreignRateService.getRateByUserId(user.getUserId());
+        model.addAttribute("user", user);
+        model.addAttribute("rates", rates);
+        model.addAttribute("foreignRates", foreignRates);
+        return "my_page";
     }
 
 }
