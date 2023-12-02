@@ -10,5 +10,16 @@
 11.30 Update
 - 해외문학에도 적용 완료
 - url 변경 list -> ranking
-  
-DB Rate, User Table 한번 밀고 해야 할 듯
+
+
+12.02 Update
+- 외국문학 테이블 수정
+  - 노벨문학상 수상여부, 휴고상 수상여부 추가
+  - 외국문학 Repository, Service, Controller이 노벨상, 휴고상, 나머지 작품을 구분하도록 변경
+  - 외국랭킹에 보여지는 리스트 수정 : 추가한 노벨문학상 작품 + 기존 문학상 작품
+
+- 외국문학 책 내용 추가
+
+- 수정사항에 따른 html 수정
+
+DB Foreign_Rate 먼저 밀고 Foreign_Book 밀어야 한다!
