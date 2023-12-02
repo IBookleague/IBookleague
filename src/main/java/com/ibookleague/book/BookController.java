@@ -24,7 +24,7 @@ public class BookController
     }
 
 
-    @GetMapping("/list")
+    @GetMapping("/ranking")
     public String list(Model model)
     {
         List<Book> bookList = this.bookService.getList();

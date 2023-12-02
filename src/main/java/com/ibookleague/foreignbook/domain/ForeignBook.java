@@ -27,6 +27,13 @@ public class ForeignBook {
     @Column(columnDefinition = "TEXT")
     private String author;
 
+
+    private Boolean winNobel;
+    private Integer winNobelYear;
+
+    private Boolean winHugo;
+    private Integer winHugoYear;
+
     @OneToMany(mappedBy = "foreignBook", cascade = CascadeType.REMOVE)
     private List<ForeignRate> rateList;
 

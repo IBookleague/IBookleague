@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ibookleague.IbookleagueApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-09T14:10:06" hostname="Ws-MacBook-Air.local" time="0.677">
+<testsuite name="com.ibookleague.IbookleagueApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-12-02T07:03:39" hostname="gusuyeon-ui-MacBookAir.local" time="0.909">
   <properties/>
-  <testcase name="testKorean()" classname="com.ibookleague.IbookleagueApplicationTests" time="0.677"/>
-  <system-out><![CDATA[23:10:04.499 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ibookleague.IbookleagueApplicationTests]: IbookleagueApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:10:04.549 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ibookleague.IbookleagueApplication for test class com.ibookleague.IbookleagueApplicationTests
+  <testcase name="testForeign()" classname="com.ibookleague.IbookleagueApplicationTests" time="0.909"/>
+  <system-out><![CDATA[16:03:36.082 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ibookleague.IbookleagueApplicationTests]: IbookleagueApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:03:36.165 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ibookleague.IbookleagueApplication for test class com.ibookleague.IbookleagueApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,377 +13,774 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-11-09T23:10:04.718+09:00  INFO 20993 --- [    Test worker] c.i.IbookleagueApplicationTests          : Starting IbookleagueApplicationTests using Java 17.0.8 with PID 20993 (started by w in /Users/w/Downloads/ibookleague)
-2023-11-09T23:10:04.719+09:00  INFO 20993 --- [    Test worker] c.i.IbookleagueApplicationTests          : No active profile set, falling back to 1 default profile: "default"
-2023-11-09T23:10:05.096+09:00  INFO 20993 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-09T23:10:05.124+09:00  INFO 20993 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 7 JPA repository interfaces.
-2023-11-09T23:10:05.329+09:00  INFO 20993 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-11-09T23:10:05.358+09:00  INFO 20993 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-11-09T23:10:05.359+09:00  INFO 20993 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-11-09T23:10:05.464+09:00  INFO 20993 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-11-09T23:10:05.483+09:00  INFO 20993 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-09T23:10:05.590+09:00  INFO 20993 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~/local user=SA
-2023-11-09T23:10:05.591+09:00  INFO 20993 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-09T23:10:05.602+09:00  WARN 20993 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2023-11-09T23:10:06.052+09:00  INFO 20993 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2023-11-09T23:10:06.084+09:00  INFO 20993 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-09T23:10:06.337+09:00  WARN 20993 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-11-09T23:10:06.412+09:00  INFO 20993 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f9919a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@530ee11a, org.springframework.security.web.context.SecurityContextHolderFilter@75a5a912, org.springframework.security.web.header.HeaderWriterFilter@3763aafd, org.springframework.security.web.csrf.CsrfFilter@25291901, org.springframework.security.web.authentication.logout.LogoutFilter@5fdcc63f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@103a1ad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b9cfc19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@535adf36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54d116d5, org.springframework.security.web.access.ExceptionTranslationFilter@36618b3b, org.springframework.security.web.access.intercept.AuthorizationFilter@66ab3716]
-2023-11-09T23:10:06.551+09:00  INFO 20993 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-11-09T23:10:06.647+09:00  INFO 20993 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
-2023-11-09T23:10:06.683+09:00  INFO 20993 --- [    Test worker] c.i.IbookleagueApplicationTests          : Started IbookleagueApplicationTests in 2.07 seconds (process running for 2.574)
-1작품명 : 아버지의 해방일지      작가명 : 정지아
+2023-12-02T16:03:36.417+09:00  INFO 5027 --- [    Test worker] c.i.IbookleagueApplicationTests          : Starting IbookleagueApplicationTests using Java 17.0.9 with PID 5027 (started by suyeon in /Users/suyeon/Desktop/github_main/IBookleague)
+2023-12-02T16:03:36.418+09:00  INFO 5027 --- [    Test worker] c.i.IbookleagueApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2023-12-02T16:03:36.966+09:00  INFO 5027 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-02T16:03:37.013+09:00  INFO 5027 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+2023-12-02T16:03:37.324+09:00  INFO 5027 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-02T16:03:37.364+09:00  INFO 5027 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-02T16:03:37.366+09:00  INFO 5027 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-02T16:03:37.526+09:00  INFO 5027 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-02T16:03:37.545+09:00  INFO 5027 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-02T16:03:37.706+09:00  INFO 5027 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~/local user=SA
+2023-12-02T16:03:37.707+09:00  INFO 5027 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-02T16:03:37.724+09:00  WARN 5027 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-02T16:03:38.354+09:00  INFO 5027 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-02T16:03:38.401+09:00  INFO 5027 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-02T16:03:38.748+09:00  WARN 5027 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-02T16:03:38.846+09:00  INFO 5027 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@186fc6e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bd5b1c8, org.springframework.security.web.context.SecurityContextHolderFilter@76685ab0, org.springframework.security.web.header.HeaderWriterFilter@6c4c32ff, org.springframework.security.web.csrf.CsrfFilter@13f255ed, org.springframework.security.web.authentication.logout.LogoutFilter@712dd0b0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@430dbcb0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7305a443, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d3f583d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@569026df, org.springframework.security.web.access.ExceptionTranslationFilter@38568876, org.springframework.security.web.access.intercept.AuthorizationFilter@3c00da24]
+2023-12-02T16:03:39.033+09:00  INFO 5027 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-12-02T16:03:39.164+09:00  INFO 5027 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/local'
+2023-12-02T16:03:39.209+09:00  INFO 5027 --- [    Test worker] c.i.IbookleagueApplicationTests          : Started IbookleagueApplicationTests in 2.954 seconds (process running for 3.837)
+1작품명 : 개정 번역판 | 해리 포터와 마법사의 돌      작가명 : 조앤.K.롤링 	내용 : 
+<개정 번역판 | 해리 포터와 마법사의 돌> 해리 포터 세대의, 해리 포터 세대를 위한, 해리 포터 세대에 의한 새 번역!
+‘21세기 대표 아이콘’에 걸맞은 완성도 높은 작품으로 재탄생하다!
+
+1997년 영국에서 출간된 이래 『해리 포터』 시리즈는 지금까지 200개국 이상 80개의 언어로 번역되고 출간되어 5억 부 이상을 판매했다. 국내에서도 1999년 『해리 포터와 마법사의 돌』의 출간을 필두로 지금까지 약 1,500만 부가 판매되었으며, 현재에도 독자들에게 변함없는 사랑을 받고 있다. 이 시리즈는 여덟 편의 영화로도 제작되어 전 세계 곳곳에서 흥행을 거두었고, 영화와 관련된 새로운 도서가 출간되고 테마 파크가 조성되는 등 놀라운 기현상을 빚어냈다.
+
+뿐만 아니라 『해리 포터』 시리즈에서 또 다른 작품들이 문화상품으로 파생되어 지금도 꾸준히 독자들을 만나고 있다. ‘해리 포터’의 다음 세대인 자녀들의 이야기를 다룬 『해리 포터와 저주 받은 아이』는 시나리오로 출간된 이후 연극으로 만들어져 영국을 시작으로 미국, 호주, 독일, 캐나다 등 세계 곳곳에서 열띤 호응을 얻으며 공연 중이고, 『해리 포터』의 세계관이 확장된 『신비한 동물 사전』 시리즈는 계속해서 영화로 제작되고 있다. 이제 『해리 포터』는 소설이라는 단순한 문학 장르에 머무르지 않고 ‘21세기를 대표하는 시대의 아이콘’으로 불리며 일종의 사회문화 현상으로 받아들여지고 있다.
+
+20주년을 맞아 새롭게 출간한 『해리 포터』 시리즈는 ‘21세기 고전’이라 불릴 만한 품격에 맞춰 작품의 완성도를 높였다. 7권 『해리 포터와 죽음의 성물』로 완간된 기존의 『해리 포터』 시리즈는 빈틈없는 소설적 구성과 생생한 캐릭터 그리고 마법 세계를 정교하게 묘사하며 풍부한 상상력이 돋보이면서도 정밀한 세계관을 구축해 나갔다. 하지만 지금까지 출간된 책들은 J.K. 롤링이 펼쳐 나가는 판타지 세계의 규모가 어느 정도이며 그 속에 어떠한 소설적 장치를 심어 놓았는지 알 수 없는 상태에서 번역 작업이 이루어졌다. 또한 1~7편 모두 완결성을 갖추었지만, 시리즈의 특성상 편과 편을 이어 주며 작품 전체를 관통하는 서사의 개연성과 완결성은 마지막 편이 출간된 이후에나 파악할 수밖에 없었다. 그러다 보니 작가가 어느 장면에 복선을 깔아 두었고, 어느 장면이 작가가 창조한 세계관을 이해하는 중요한 역할을 하는지 의미를 파악하며 번역하기에는 한계가 있었다.
+
+이번에 선보이는 『해리 포터』 시리즈에는 J.K. 롤링이 작품 속에 이룩해놓은 문학적 성취가 완벽하게 구현되어 있다. 복선과 반전을 선사하는 문학적 장치들을 보다 정교하고 세련되게 다듬었으며, 인물들 사이의 관계나 그들의 숨겨진 비밀 그리고 성격이 도드라지는 말투의 미세한 뉘앙스까지 점검했다. 『해리 포터』의 세계에 처음 발을 들여놓는 독자는 물론, 그동안 『해리 포터』의 세계를 즐겨 찾아왔던 독자 모두에게 완성도 높은 만족과 감동을 선사할 것이다.
+
+1탄 《해리포터와 마법사의 돌》
+어둠의 마왕 볼드모트에게 부모를 잃고 홀로 살아남은 아이, 해리는 안전을 위해 마법사가 아닌 사람인 ‘머글’ 페투니아 이모와 버논 이모부 손에 길러지며 불우한 어린 시절을 보낸다. 열한 번째 생일날, 해그리드를 통해 자신이 마법사라는 사실을 알게 된 해리는 호그와트 마법학교에 입학해 헤르미온느 그레인저, 론 위즐리라는 친구들과 함께 영생을 주는 마법사의 돌을 찾는 엄청난 모험을 시작하게 된다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-2작품명 : 불편한 편의점      작가명 : 김호연
+        (?,?,?,?,?,?,?,default)
+2작품명 : 빨강, 파랑, 어쨌든 찬란      작가명 : 케이시 맥퀴스턴 	내용 : 
+<빨강, 파랑, 어쨌든 찬란> 사람들의 시선과 기대로부터 자유로워지면 오롯이 드러나는 참모습
+이제 환한 대낮에 서로 사랑하는 법을 배워야 한다!
+
+엄마는 미국 최초의 여성 대통령, 아버지는 소수인종의 상원 의원. 알렉스는 어릴 때부터 공부면 공부, 운동이면 운동, 모든 것을 한 치의 오차 없이 완벽하게 해내고자 남몰래 고군분투했다. 그래서인지 노력도 고민도 없이 태어나는 것만으로 모든 걸 다 가진 듯한 영국의 막내 왕자 헨리가 만날 때마다 늘 눈엣가시처럼 신경에 거슬리는데…. 어쩔 수 없이 우정을 가장해야 할 상황에 내몰린 두 사람은 서로에 대해, 또 자기 자신에 대해, 뜻밖의 진실을 자꾸만 발견하게 된다.
+두 사람이 서로를 알아가면서, 이 사랑스러운 소설은 가볍지만은 않은 사려 깊은 속내를 드러낸다. 알렉스와 헨리는 의무와 사적인 갈망, 원하는 것과 현실적 제약, 사회적 기대와 참다운 자기 모습의 괴리 속에서 허우적거리는 청춘이고, 모든 걸 걷어내고 나면 오롯하게 사랑스러운 괴짜와 치열한 몽상가가 남는다. 무지개처럼 다양한 빛깔로 반짝이는 서로 다른 사람들, 누구나 자기 빛깔 그대로 사랑하고 사랑받으며 살아갈 수 있는 세상을 꿈꾸는 젊음의 용기가 이 세상을 한 발 앞으로 끌고 나간다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-3작품명 : 홍학의 자리      작가명 : 정해연
+        (?,?,?,?,?,?,?,default)
+3작품명 : 파친코 1      작가명 : 이민진 	내용 : 
+<파친코 1> 
+
+“역사는 우리를 저버렸지만, 그래도 상관없다”
+역사에 외면당한 재일조선인 가족의 대서사극
+전 세계를 감동시킨 이민진 작가 화제작 《파친코》 새롭게 출간!
+
+“내게 ‘한국인’은 이야기의 주인공이 될 가치가 있는 이들이다.
+나는 가능한 한 오래 한국인 이야기를 쓰고 싶다.” 
+– ‘한국 독자들에게’ 중에서
+
+4대에 걸친 재일조선인 가족의 이야기를 그린 세계적 베스트셀러, 이민진 작가의 장편소설 《파친코》가 새롭게 출간되었다. 《파친코》는 재미교포 1.5세대인 이민진 작가가 30년에 달하는 세월에 걸쳐 집필한 대하소설로, 2017년 출간되어 《뉴욕타임스》 베스트셀러에 올랐다. 현재까지 전 세계 33개국에 번역 수출되었으며, BBC, 아마존 등 75개 이상의 주요 매체의 ‘올해의 책’으로 선정되었을 뿐 아니라 전미도서상 최종 후보에 이름을 올리며 평단과 대중을 모두 사로잡은 작품이다. 버락 오바마 전 미국 대통령으로부터 “회복과 연민에 대한 강력한 이야기”라는 찬사를 받으며 주목을 받았다.
+
+지난 4월 판권 계약이 종료되며 절판되었던 《파친코》는 새로운 번역과 디자인으로 한국 독자에게 돌아왔다. 첫 문장(“역사는 우리를 저버렸지만, 그래도 상관없다”)에서부터 원문의 의미를 보다 충실하게 전달하고자 했으며, 작품 특유의 속도감 있는 문체를 살리고자 노력했다. 또한 작가가 처음 의도한 구조와 흐름을 살리기 위해 총 세 파트(1부 ‘고향’, 2부 ‘모국’, 3부 ‘파친코’)로 된 원서의 구성을 그대로 따랐다. 새 출간을 기념해 ‘한국 독자들에게’ 보내는 글에는 한국인 이야기를 계속해서 쓰는 이유를 밝혔다. 작가는 “우리가 매력적이기 때문”이라며, “한국인은 지적으로나, 감성적으로나 깊이 있는 이야기의 주인공이 될 가치가 있는 이들”이기에 앞으로도 한국의 이야기를 젊은 세대들에게 들려주고 싶다며 한국 독자들에게 각별한 애정을 표했다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-4작품명 : 사랑의 이해      작가명 : 이혁진
+        (?,?,?,?,?,?,?,default)
+4작품명 : 프로젝트 헤일메리      작가명 : 앤디 위어 	내용 : 
+<프로젝트 헤일메리> “다음 세기까지 SF 고전으로 남을 대작”
+『마션』의 천재 작가가 선보이는 경이로운 우주 활극
+전 세계 30개국 동시 출간
+
+“SF계 천재 작가의 귀환” “단언컨대 SF소설 중에서도 최고의 책” “2021년 가장 기대되는 소설” 등 이미 출간 전부터 전 세계 언론의 극찬과 기대가 쏟아진 작품이 있다. 우리에게 영화 [마션]의 원작소설가로 잘 알려진 앤디 위어의 신작 『프로젝트 헤일메리』다. 앤디 위어는 데뷔작 『마션』과 후속작 『아르테미스』가 연달아 대성공을 거두며 뉴욕 타임스와 아마존 베스트셀러에 이름을 올린 명실상부 최고의 SF 작가이다. 국내에서도 누적 판매 30만 부를 돌파하며 독자들에게 믿고 보는 작가로 손꼽힌다. 그런 그의 최신작『프로젝트 헤일메리』는 전 세계 최초로 동시 출간이 결정되어 그 어느 때보다 뜨거운 관심을 모았다. 집필 시작도 전에 수많은 출판사가 치열한 판권 경쟁에 뛰어들어, 30여 개국에서 계약을 마치고 동시 출간을 준비 중이다. 영화계 또한 MGM에서 제작을 확정하는 한편, [라라랜드]의 라이언 고슬링이 이 작품의 주연이자 제작자로 참여하여 한층 더 큰 기대감을 모으고 있다.
+
+글을 쓸 때 과학적 사실을 조사하고 검증하는 것으로 정평이 난 작가의 작품인 만큼 흠잡을 데 없는 과학적 지식은 더할 나위 없다. 전작들에 이어 이번 작품에서도 작가의 장기인 과학을 기반으로 한 SF 세계관과 낙관적 감수성이 유감없이 그려졌다. 특히 작가가 치밀하게 구상한 ‘특별한 캐릭터’의 등장은 단연 『프로젝트 헤일메리』의 백미다. 이번 신작은 그 특별한 캐릭터와의 공생과 연대 그리고 인류를 뛰어넘은 우정에 대한 이야기가 주를 이룬다. 지구를 구하기 위해서 정작 스스로는 지구로 돌아오지 못할 헤일메리호에 오른 ‘좋은 사람’인 주인공. 『마션』에서 한 인간을 구하기 위한 인류애를 보여줬다면 이번에는 전 인류를 구하기 위한 한 인간의 사명감과 애정이 한층 진하게 펼쳐진다. 앤디 위어의 세계는 더욱 깊어지고 넓어졌다. 『프로젝트 헤일메리』에 탑승한 독자라면 이 말에 아무 이견이 없을 것이다.
+
+이번 한국어판은 [해리포터] 시리즈를 번역한 강동혁 역자가 맡아 ‘지구 멸망 위기를 앞두고서도 유쾌한 주인공 캐릭터’를 생생한 언어로 살려냈다. 특별히 이번 신간을 포함해 앤디 위어의 전작을 리커버하여 앤디 위어의 팬들에게 특별한 선물이 되도록 했다. ‘우주 3부작’ 세트 박스로 구성된 디자인은 ‘코리아 디자인 어워드’ 그래픽 부분 등에서 수상한 석윤이 디자이너가 개성 넘치는 감각을 덧입혔다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-5작품명 : 칵테일, 러브, 좀비      작가명 : 조예은
+        (?,?,?,?,?,?,?,default)
+5작품명 : 가재가 노래하는 곳      작가명 : 델리아 오언스 	내용 : 
+<가재가 노래하는 곳> 
+
+★「뉴욕 타임스」 180주 연속 베스트셀러★ 
+★아마존 40주 연속 종합 1위★
+★아마존 2018 올해의 책★ 
+★반스앤노블 2018 올해의 책★ 
+★2019 가장 많이 팔린 책★ 
+★전 세계 46개국 판권 계약★
+★리즈 위더스푼 북클럽 도서 선정★ 
+★소니픽처스 영화 배급, 2022년 11월 2일 국내 개봉★
+
+
+2019년 가장 많이 팔린 책, 출간 반년 만에 밀리언셀러 돌파!
+한번 손에 들면 쉽게 내려놓지 못할 경이로운 소설,
+전 세계적인 화제를 일으키고 영화로 다시 돌아오다
+
+2018년 8월 14일, 평생 야생동물을 연구해온 한 생태학자가 일흔이 가까운 나이에 첫 소설을 출간한다. 미국 남부의 노스캐롤라이나주 아우터뱅크스의 해안 습지를 배경으로 한 소녀의 성장담이 미국 출판계에 불러올 어마어마한 파장을 이때는 예측하지 못했다. 얼마 후, 미국 도서 업계에 강력한 영향력을 발휘하는 <헬로 선샤인 북클럽> 운영자이자 할리우드 스타인 리즈 위더스푼이 이 책을 발굴해 추천작으로 소개하자, 『가재가 노래하는 곳』은 단번에 「뉴욕 타임스」 베스트셀러로 뛰어올랐다. 2018년 8월 미 현지에서 출간된 후 지금까지 1,500만 부 이상 판매되며 180주(2022년 10월 기준) 간 「뉴욕타임스」 베스트셀러 목록에 올랐고, 무려 40주 연속 아마존 주간 베스트셀러 종합 1위를 기록했다. 이렇게 독자들의 꾸준한 관심과 사랑을 받아온 『가재가 노래하는 곳』은 소니 픽처스를 통해 동명의 영화로 재탄생하여 2022년 11월 2일 국내 개봉을 앞두고 있고, 그와 함께 영화 개봉 기념 『가재가 노래하는 곳』 스페셜 에디션이 새롭게 출간되었다. 
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-6작품명 : 하얼빈      작가명 : 김훈
+        (?,?,?,?,?,?,?,default)
+6작품명 : 폭풍의 언덕      작가명 : 에밀리 제인 브론테 	내용 : 
+<폭풍의 언덕> 요크셔의 황야를 무대로 펼쳐지는 현실을 초월한 폭풍 같은 사랑
+ 서른 살에 요절한 작가 에밀리 브론테가 남긴 단 한 편의 걸작
+
+ 에밀리 브론테가 죽기 일 년 전에 발표한 유일한 소설. 황량한 들판 위의 외딴 저택 워더링 하이츠를 무대로 벌어지는 캐서린과 히스클리프의 비극적인 사랑, 에드거와 이사벨을 향한 히스클리프의 잔인한 복수를 그린 이 작품은 작가가 ‘엘리스 벨’이라는 가명으로 발표했을 당시에는 그 음산한 힘과 등장인물들이 드러내는 야만성 때문에 반도덕적이라는 비난을 받았다. 심지어 그녀의 언니 샬럿마저도 1850년에 출판된 소설의 서문에서 "어쭙잖은 작업장에서 간단한 연장으로 하찮은 재료를 다듬어 만든 것"이라고 말한 바 있다. 에밀리가 이 세상에 남긴 것은 이 한 편의 소설과 완성되지 않은 단편적인 문장을 포함한 193편의 시에 불과하다. 그럼에도 그녀가 불후의 문학적 명성을 얻게 된 것은, 바로 이 작품 『폭풍의 언덕』에서 보이는 빛나는 감수성과 시적이고 강렬한 필치, 그리고 새로운 문학사적 의의 때문이다. 백 년이 지난 오늘 이 소설은 셰익스피어의 『리어 왕』, 멜빌의 『백경』과도 곧잘 비교될 만큼 깊은 비극성과 시성(詩性)으로 높이 평가받고 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-7작품명 : 이토록 평범한 미래      작가명 : 김연수
+        (?,?,?,?,?,?,?,default)
+7작품명 : 문예춘추사 셜록 홈즈 전집 세트      작가명 : 아서 코난 도일 	내용 : 
+<문예춘추사 셜록 홈즈 전집 세트> 추리소설의 고전, 삽화와 함께 완역본으로 만나는 셜록 홈즈!
+
+『문예춘추사 셜록 홈즈 전집 세트』는 셜록 홈즈 시리즈를 출판 순서에 맞게 4편의 장편을 포함해 총 60편의 작품을 포함한 완역본 세트이다. 친절한 주석은 물론 다양한 삽화를 더해 독자들에게 더 큰 재미를 선사한다. 셜록 홈즈의 매력을 더 크게 만날 수 있는 기회가 될 것이다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-8작품명 : 구의 증명      작가명 : 최진영
+        (?,?,?,?,?,?,?,default)
+8작품명 : 동급생      작가명 : 프레드 울만 	내용 : 
+<동급생> 
+
+프레드 울만의 작은 걸작 『동급생』 드디어 출간
+
+나치즘과 홀로코스트의 시대를 다룬 소설 중에서 가장 유명하고 지금까지 널리 읽히는 책의 하나인 『동급생』이 열린책들에서 출간되었다. 『동급생』은 1930년대 독일 슈투트가르트를 배경으로 유대인 소년과 독일 귀족 소년의 우정을 그린 프레드 울만의 소설이다. 작가 아서 케스틀러가 [작은 걸작]이라 평가하며 찬사를 아끼지 않았고, 아카데미 프랑세즈 회원이자 『르 피가로』 주필이었던 장 도르메송이 [눈물을 펑펑 쏟으며 울었다]고 고백한 바 있다.
+
+이 작품은 사춘기 두 소년이 우정을 형성해 가는 과정을 생동감 있게 묘사했다. 독일 서남부 지역의 아름다운 풍경 속에서 펼쳐지는 두 소년의 우정 이야기는 히틀러와 나치즘이 대두하는 시대적 배경과 절묘하게 병치되어, 독자들을 제2차 세계 대전의 잔학상에 나뒹굴게 하지 않고도 인간의 추악함과 숭고함을 선명하게 드러내 준다. 1년 남짓한 시간 동안 강렬하게 형성된 두 소년의 우정처럼, 이 책 역시 짧지만 강렬하다. 특히 엄청난 반전이 담긴 마지막 문장은 충격과 감동을 동시에 느끼게 한다. 
+
+작가 프레드 울만은 원래 독일에서 태어났지만 히틀러를 피해 영국에 정착한 화가이다. 그가 70세가 다 되어 발표한 작품인 『동급생』은 1971년 첫 출간 당시에는 별 주목을 받지 못하다가 1977년 아서 케스틀러의 서문과 함께 재출간되면서 큰 반향을 얻었고, 전 세계 20개 이상 언어로 번역되어 현대의 고전 중 하나가 되었다. 이 책은 이후 수십 년 동안 유럽 청소년들이 꼭 읽어야 할 책으로 자리 잡았고 여러 나라에서 필독 도서와 추천 도서로 선정되어 유럽에서만 매년 10만 부 이상 판매된다. 분량은 짧지만 다른 걸작 소설들과 어깨를 나란히 하기에 전혀 부족함이 없다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-9작품명 : 밝은 밤      작가명 : 최은영
+        (?,?,?,?,?,?,?,default)
+9작품명 : 합본 | 해리포터와 저주받은 아이 1,2부      작가명 : 조앤.K.롤링 	내용 : 
+<합본 | 해리포터와 저주받은 아이 1,2부> 오리지널 웨스트엔드 프로덕션의 <해리 포터와 저주받은 아이> 공식 대본.
+해리 포터로 사는 일은 늘 힘들고, 어른이 되어서도 상황은 크게 나아지지 않는다. 그는 마법부 직원으로 격무에 시달리면서도 한 여자의 남편이자 학교에 다니는 세 자녀의 아빠로서 책임을 다해야 한다.
+
+게다가 과거는 과거에만 머물지 않는 법. 해리는 불쑥불쑥 찾아오는 과거와 씨름하며 괴로워하고 그사이 그의 막내아들 알버스는 유명한 부모를 둔 탓에 자신에게 쏟아지는 높은 기대에 힘겨워한다. 과거와 현재가 불길하게 뒤섞이자 이 부자는 불편한 진실을 깨닫는다. 때로는 예기치 못한 곳에서 어둠이 나타난다는 사실을.
+
+J.K. 롤링과 존 티퍼니, 잭 손의 원작을 토대로 한 연극 〈해리 포터와 저주받은 아이〉는 2016년 여름 런던 웨스트엔드에서 세계 최초로 공연되었고 ‘스페셜 리허설 에디션’ 대본으로도 출간되었다. 연극은 개막과 함께 일반 관객과 비평가 모두에게 호평을 받았고 대본 역시 발간 즉시 세계적인 베스트셀러가 되었다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-10작품명 : 고래      작가명 : 천명관
+        (?,?,?,?,?,?,?,default)
+10작품명 : 하우스 메이드      작가명 : 프리다 맥파든 	내용 : 
+<하우스 메이드> 
+
+전과를 숨긴 채 억만장자의 집에 가정부로 입주한 나,
+하지만 비밀을 가지고 있는 건 나만이 아니었다.
+
+출소 후 몇 주째 차 뒷좌석에서 먹고 자며 생활하던 나에게 드디어 마지막 기회가 찾아왔다. 한 부잣집에서 가사도우미로 일하게 된 것이다. 비록 창문도 열리지 않고 문도 밖에서만 잠글 수 있는 비좁은 다락방에서 지내야 했지만 그건 중요하지 않았다. 내 첫 일은 늘 새하얀 옷만 입는 안주인 니나가 난장판으로 만들어 놓은 주방을 치우는 것이었다. 이런 일이 매일 계속됐지만 니나는 자신이 한 일을 기억하지 못하는 것 같았고, 그녀에게 정신병이 있다는 소문도 돌았다. 온갖 괴팍한 요구에도 나는 잘리지 않기 위해 꾹 참고 일했다. 그러던 어느 날, 과묵한 외국인 정원사가 심각한 표정으로 나에게 말을 건넸다. 알아들을 수 없었지만 나중에 검색해보니 ‘위험’이라는 뜻이었다. 그 말을 들은 직후 다락방을 나가려고 손잡이를 돌렸지만 갑자기 문이 열리지 않았다. ‘날 방에 가둔 건가? 침착하자.’ 그들은 아직 내 비밀을 모른다. 내가 진짜 어떤 사람이고 뭘 할 수 있는 사람인지를….
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-11작품명 : 아주 희미한 빛으로도      작가명 : 최은영
+        (?,?,?,?,?,?,?,default)
+11작품명 : 당신 인생의 이야기      작가명 : 테드 창 	내용 : 
+<당신 인생의 이야기> 
+
+머리를 쓰는데 가슴이 뜨거워진다! 
+이렇게 가슴 벅찬 SF라니!
+
+최고의 과학소설 작가, 테드 창 작품 영화화!
+「시카리오」 드니 빌뇌브 감독, 11월 개봉작 SF 「컨택트」 원작! 
+
+전혀 다른 차원의 소재와 전혀 다른 스타일의 전개로
+최고의 과학소설에 수여되는 모든 상을 석권한 엄청난 소설! 
+
+단 한 권의 작품집으로 “전 시대를 통틀어 가장 위대한 과학 단편소설 작가 중의 한 명”이라는 명성을 얻은 테드 창의 『당신 인생의 이야기』가 출간됐다. 최고의 과학소설에 수여되는 네뷸러상, 휴고상, 로커스상, 스터전상, 캠벨상, 아시모프상, 세이운상, 라츠비츠상을 모두 석권한 이 책은 과학이 줄 수 있는 최고의 지적 상상력과 소설이 줄 수 있는 최고의 철학적 사유를 선사하는 특별한 책이다. 통찰력 있는 주제를 우아하고 적격한 문체로 풀어나가는 『당신 인생의 이야기』는 SF 소재를 언급할 필요도 없이, 소설을 좋아하는 사람의 서가에 반드시 꽂혀 있어야 하는 작품이다. 아이디어를 압축해 중·단편으로 내놓은 결과물은 그 밀도가 기가 막힐 지경이다. 기막힌 상상력을 품고 있으면서도 읽고 나면 엄청난 감동이 밀려오는 여덟 편의 단편이 수록되어 있는 이 작품은 전 세계 15개국에 번역 출간되었다. 2017년 초, 그의 두 번째 작품집이 「엘리」에서 출간될 예정이다. 두 번째 작품집에는 미발표 신작 단편을 포함한 일곱 편의 작품이 실린다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-12작품명 : 이상 소설 전집      작가명 : 이상
+        (?,?,?,?,?,?,?,default)
+12작품명 : 세일즈맨의 죽음      작가명 : 아서 밀러 	내용 : 
+<세일즈맨의 죽음> 현대 희곡을 대표하는 거장 아서 밀러의 대표작
+세계적으로 가장 많이 공연되고 사랑받은 20세기 최고의 드라마
+
+현대 희곡의 거장 아서 밀러의 대표작 『세일즈맨의 죽음』은 1949년 브로드웨이에서 초연되자마자 즉시 하나의 사건으로 받아들여졌고 아서 밀러를 단숨에 현대 문학을 대표하는 작가로 끌어올렸다. 이후 오늘날까지 전 세계적으로 가장 널리 공연되고 사랑받는 미국의 대표적인 희곡 중 하나로 손꼽힌다. 『세일즈맨의 죽음』은 과거와 현재를 넘나들며 인간의 소외와 붕괴를 뿌리까지 파고드는 혁신적인 기법으로 미국 현대극에 새로운 지표를 제시했다. 초연 후 2년간 장기 공연되며 연극계 3대 상인 퓰리처 상, 토니 상, 뉴욕 연극비평가상을 휩쓸었고 영화로도 제작되어 호평을 받았다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-13작품명 : 탄금 - 금을 삼키다      작가명 : 장다혜
+        (?,?,?,?,?,?,?,default)
+13작품명 : 별의 계승자 전권 세트(총5권)      작가명 : 제임스 P. 호건 	내용 : 
+<별의 계승자 전권 세트(총5권)> SF 마니아들이 가장 사랑하며 복간을 기다려온 작품,
+세계적 SF 작가 제임스 P. 호건의 대표작 드디어 복간!
+
+달에서 5만 년 전 우주비행사의 시체가 발견되었다
+우주복 안의 유골은 인류와 똑같은 호모 사피엔스
+과연 그는 5만 년 전에 어떻게, 왜 달에 갔는가
+상상을 뛰어넘는 반전의 결말과 인류 기원의 수수께끼
+
+일본의 권위 있는 SF문학상 성운상을 세 번이나 수상한, 세계적인 SF 작가 제임스 P.호건의 대표작. 일본 SF 문학상을 수상하고, <기동전사 Z건담>, <신비한 바다의 나디아> 등 유명 애니메이션들이 앞다투어 오마주했고, 호시노 유키노부가 만화화해서 만화판 역시 2013년 성운상을 수상하기도 했다. 
+
+가까운 미래. 달에서 우주복을 입은 인간의 유해가 발견된다. 연대측정 결과 놀랍게도 그가 사망한 것은 5만 년 전. 온 지구가 발칵 뒤집힌 가운데 '찰리'라고 명명된 그 월인(月人)의 정체를 밝히기 위해 대규모 조사단이 꾸려진다. 모든 분야 전문가들이 총동원되어 수수께끼의 해결에 몰두한다. 
+
+갈수록 퍼즐 조각은 점점 더 늘어난다. '찰리'의 동료들로 보이는 유해가 몇 구 더 발굴되고, 우주선의 잔해가 모습을 드러낸다. 마지막 순간, 조사팀의 핵심 인물들은 치열한 논쟁을 통해 마침내 월인의 수수께끼를 해결하기에 이르지만, 결말에 기다리고 있는 것은 그 모든 가설을 압도하는 놀라운 반전인데…
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-14작품명 : 보건교사 안은영      작가명 : 정세랑
+        (?,?,?,?,?,?,?,default)
+14작품명 : 파운데이션 1 - 파운데이션      작가명 : 아이작 아시모프 	내용 : 
+<파운데이션 1 - 파운데이션> 로봇 3원칙으로 잘 알려진 미래학자이자 세계 3대 SF 작가로 꼽히는 아이작 아시모프의 대표작. '파운데이션 시리즈'는 아이작 아시모프가 1942년부터 집필하여 사망에 이른 1992년까지 약 50년간 집필한 필생의 역작이자 국가와 인류의 미래를 예측하는 새로운 학문인 '심리 역사학'을 최초로 선보인 작품이다. 
+
+2008년 노벨경제학상을 수상한 폴 크루그먼은 '우리 사회가 어떻게 나아갈지를 예측하고 대비하여 더 나은 방향으로 이끄는 학문'인 '심리 역사학'을 전공하고 싶었으나 현실에 없는 학문이라 가장 유사한 학문인 '경제학'을 선택하게 되었다고 고백한 적이 있을 만큼 '로봇 3원칙'과 함께 아시모프를 대표하는 키워드이다. 
+
+에드워드 기번의 <로마제국 쇠망사>에서 영감을 얻어 집필된 작품인 만큼, SF라는 외피를 걷어내면 현실 정치와 국가의 흥망성쇄를 다룬 역사적 이야기들이 소설적 재미와 함께 흥미로운 이야깃거리를 선사한다. 이 작품은 휴고상, 네뷸러상, 로커스상 등을 수상했으며, 2013년 현재 할리우드에서 대작 영화로 기획 중이어서 많은 팬들로부터 <반지의 제왕>에 비견될 트릴로지 영화로 기대를 모으고 있다. 
+
+2012년에는 유력 대선 예비 후보였던 안철수 의원에 의해 '미래를 위한 노력의 중요성'을 강조하는 작품으로 인용되어 화제를 모으기도 했다. 무엇보다 이번 판본은 국내에 첫 소개되는 아시모프의 유작 <파운데이션을 향하여>를 포함한 완전판 시리즈이며, 과거 짜깁기와 분권, 뒤죽박죽이던 순서를 바로잡아 최초의 출간일순에 맞게 순서를 재정돈함은 물론, 두께에 상관없이 원서와 동일한 권수로 출간하였다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-15작품명 : 재수사 1      작가명 : 장강명
+        (?,?,?,?,?,?,?,default)
+15작품명 : 백만장자를 위한 공짜 음식1      작가명 : 이민진 	내용 : 
+<백만장자를 위한 공짜 음식1> 
+
+당신이 가진 것 없는 이민자의 딸이라면
+부모와 다른 눈부시고 화려한 인생을 꿈꾼다면
+능력은 저주일 수 있다.
+
+세계적 베스트셀러 《파친코》 이민진 작가
+‘코리안 디아스포라 삼부작’의 출발점
+
+*《뉴욕타임스》 에디터스 초이스, 《타임스》, 《USA투데이》 선정 올해의 책
+*출간 기념 작가 사인 인쇄, ‘한국 독자를 위한 서문’ 특별 수록
+
+2022년 새로운 번역으로 돌아온 《파친코》에 이어, 이민진 작가의 ‘코리안 디아스포라’ 삼부작의 첫 번째 소설인 《백만장자를 위한 공짜 음식》이 한국 독자를 찾아왔다. 1990년대 뉴욕을 배경으로 한국계 이민 2세대 여성인 케이시 한과 동생 티나 한, 친구 엘라 심의 이야기가 펼쳐진다. 언뜻 친절하고 화려해 보이는 맨해튼에서나, 비정한 월 스트리트에서나, 이민자의 고단함이 느껴지는 퀸스에서나 반은 한국인이고 반은 미국인인 이들의 삶은 결코 녹록치 않다. 재능 넘치고 좋은 교육까지 받았음에도 성공의 문턱에서 미끄러지는 이들의 좌절은 이민 1세대인 부모 세대의 것과는 다르기에 더욱 안타깝다. 섬세하게 묘사된 세대 간, 계층 간, 남녀 간의 갈등은 2022년에도 독자의 마음을 공명하게 한다.
+《백만장자를 위한 공짜 음식》은 2007년 출간되어 당시로서는 미국 문단이 주목하지 않던 재미한국인의 이야기를 생생하게 담아내 극찬을 받았다. 주인공 케이시처럼 어린 나이에 부모를 따라 미국으로 건너간 이민진 작가의 자전적인 경험이 녹아 있는 소설로도 주목받았다. 이번 한국어판에는 특별히 한국 독자를 위한 이민진 작가의 서문을 실었다. 특히 작가는 주인공에게 ‘케이시’라는 이름을 붙이게 된 이유를 처음으로 풀어놓는다. 뉴욕에서 야망 넘치는 한국인 젊은이로 산다는 것에 대한 담담한 술회는 소설과는 또 다른 결로 독자의 마음을 어루만진다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-16작품명 : 개정판 | 작은 땅의 야수들      작가명 : 김주혜
+        (?,?,?,?,?,?,?,default)
+16작품명 : 개정판 | 레베카      작가명 : 대프니 듀 모리에 	내용 : 
+<개정판 | 레베카> 앨프리드 히치콕의 영화 <레베카>와 
+미하엘 쿤체 뮤지컬 <레베카>를 탄생시킨 불멸의 원작
+『레베카』 초판 출간 80주년 기념판
+
+20세기의 가장 영향력 있는 소설 가운데 하나. 영국 문화라는 직물 위에 아름다운 환상과 불안으로 가득한 꿈을 교차시켜 독특한 무늬를 수놓았다. 놀라우리만큼 매혹적인 작품이다. 
+_세라 워터스
+
+『자메이카 여인숙』 『나의 사촌 레이첼』 등 로맨스와 서스펜스의 경계를 넘나드는 걸작들로 수십 년간 전 세계 미스터리 독자를 사로잡아온 ‘20세기 영국 최고의 이야기꾼’ 대프니 듀 모리에. 그녀의 다섯 번째 소설이자 명실상부한 대표작인 『레베카』가 올해로 출간 80주년을 맞았다. 
+1938년 8월 첫선을 보인 『레베카』는 이후 4년간 영국에서만 28쇄를 거듭할 정도로 폭발적인 반응을 불러일으켰고, 유럽과 미국 전역에서도 베스트셀러에 올라 그해 미국서점협회가 수여하는 전미도서상을 수상하며 세계적 명성을 얻었다. 이어 1940년 스릴러의 거장 히치콕 감독에 의해 스크린으로 옮겨지고 이 영화가 제13회 아카데미 작품상과 촬영상을 거머쥐면서 원작의 위상은 한층 더 공고해졌다. 『레베카』는 이후로도 수차례 영화, 연극, 라디오와 TV 드라마로 각색되어 당대 대중들로부터 사랑을 받았고, 2006년에는 극작가 미하엘 쿤체와 작곡가 실베스터 르베이의 동명 뮤지컬로 재탄생해 한국을 비롯한 전 세계에서 공연되는 등 시대와 국경을 초월하여 오늘날까지도 대중문화 전반에 막대한 영향을 미치고 있다. 
+2013년 『레베카』를 필두로 듀 모리에의 대표작과 숨겨진 걸작들을 엄선해 소개해온 현대문학은 예술계에 끊임없이 활력과 영감을 불어넣고 있는 이 ‘젊은 고전’의 탄생을 기념하여 2013년 판에 이어 2018년, 시대를 풍미하는 클래식한 요소를 가미한 감각적 디자인의 새로운 『레베카』를 선보인다.
+
+■ 줄거리
+화려한 대저택의 이면에 감추어진 죽음의 그림자
+출간 이후 단 한 번도 절판된 적 없는 고딕 미스터리의 고전
+돈 많고 수다스러운 노부인의 시중을 들며 하녀와 다름없는 생활을 하던 ‘나’는 몬테카를로의 한 호텔에서 아내와 사별한 귀족 남성 맥심을 만난다. 함께 시간을 보내며 가까워진 우리는 서둘러 결혼을 하고, ‘나’는 아름답기로 유명한 맨덜리 저택의 안주인이 되어 새 삶을 시작한다. 그러나 설레는 마음을 안고 도착한 맨덜리에는 전 부인인 죽은 레베카의 그림자가 짙게 드리워져 있다. 맥심은 여전히 그녀의 죽음에서 벗어나지 못한 듯 괴로워하고, 저택을 관리하는 댄버스 부인은 사사건건 ‘나’와 레베카를 비교하며 노골적으로 적의를 드러낸다. 아름다운 외모에 사교성까지 두루 갖추었던 레베카와 달리 ‘나’는 모든 면에서 그녀에게 못 미치는 어리고 미숙한 존재였다. 화려하지만 묘하게 음산한 대저택 맨덜리에서 ‘나’는 원인 모를 공포와 열등감에 시달리며 점점 신경질적으로 변해간다. 그리고 새하얀 안개가 사방을 뒤덮은 어느 날, 저택 인근의 바다 밑바닥에 가라앉아 있던 시체 한 구가 물 위로 떠오르면서 ‘나’는 레베카의 죽음 뒤에 감추어졌던 엄청난 비밀을 마주하게 된다.      
+
+고딕 미스터리에 로맨스의 요소가 가미된 『레베카』는 치밀한 사건 전개와 예측을 뒤엎는 반전, 그리고 그 이상으로 돋보이는 섬세한 내면 묘사가 압권인 작품이다. 수줍음 많고 자기표현에 서툰 ‘나’는 맨덜리의 안주인이라는 낯선 역할에 적응하느라 홀로 고군분투한다. 주변인들로부터 남편의 전 부인 레베카와 비교당하고, 자기 안의 열등감과 싸우며 하루하루를 시험대 위에 오르는 기분으로 버텨낸다. 『레베카』는 사랑하는 이와의 행복한 결혼 생활을 꿈꾸던 한 여자가 보이지도 존재하지도 않는 ‘레베카’의 힘에 짓눌려 마음속에 서서히 지옥을 만들어가는 과정을 바로 옆에서 훔쳐보는 듯 실감 나게 그린다. 듀 모리에는 평온한 일상과 죽음의 그림자가 교차하는 대저택에서 행복과 고독을 동시에 맛보는 ‘나’의 복잡한 심경 변화를 놀랄 만큼 섬세하게 묘사해냈고, 영화와 뮤지컬에는 온전히 담아낼 수 없는 원작의 심층을 꿰뚫는 심리 묘사는 『레베카』가 80년간 단 한 번도 절판되지 않고 세월을 뛰어넘어 사랑받을 수 있었던 결정적 요인이 되었다.  
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-17작품명 : 한국이 싫어서      작가명 : 장강명
+        (?,?,?,?,?,?,?,default)
+17작품명 : 기억 전달자      작가명 : 로이스 로리 	내용 : 
+<기억 전달자> 1994년 뉴베리 상, 1993년 보스턴 글로브 혼 북 아너 상 수상작
+[1984], [멋진 신세계], [시녀 이야기]의 뒤를 잇는 또 하나의 SF 명작
+모두가 잃어버린 감정을 찾기 위해 나서는 열두 살 소년의 이야기
+
+미국에서 가장 권위 있는 어린이·청소년 문학상인 뉴베리 상을 두 번이나 수상한 작가 로이스 로리의 청소년 소설 [기억 전달자 The Giver]가 비룡소에서 출간되었다. 로이스 로리는 뉴베리 상 외에도 보스턴 글로브 혼 북 상, 리자이너 메달 등 수많은 상을 수상한 미국의 대표적인 청소년 문학 작가이다. 로이스 로리에게 두 번째 뉴베리 상을 안겨 준 그녀의 대표작 [기억 전달자]는 미국에서만 350만 부가 팔린 베스트셀러이자 미국 내 여러 학교에서 필독서로 읽히고 있다.
+이 작품은 사회 구성원 간의 갈등을 최소화하고 효율성을 극대화하기 위해 모두가 똑같은 형태의 가족을 가지고 동일한 교육을 받으며 성장하는 미래 사회의 어느 마을을 배경으로 펼쳐진다. 주인공인 소년 조너스는 열두 살이 되는 생일날 ‘기억 보유자’라는 직위를 부여받는다. 기억 보유자는 마을에서 과거의 모든 기억을 가지고 있는 단 한 명의 사람으로서 원로 중의 원로. 기억을 바탕으로 위원회에 조언을 하는 것이 기억 보유자의 역할이다. 선임 기억 보유자는 이제 ‘기억 전달자’가 되어 조너스에게 과거의 기억을 전해 준다. 이 과정에서 조너스는 완벽한 사회를 위해 희생된 진짜 감정들을 경험하게 된다. 감추어져 있던 진실을 깨닫고 갈등하는 조너스의 모습을 통해 작가는 진정 행복한 사회는 어떤 곳인지, 사회의 통제는 어느 정도까지 허용될 수 있는지 질문을 던진다. 현재와는 다른 구조를 가진 미래 사회를 표현하기 위해 단어 하나하나를 세심하게 선택하고 ‘임무 해제’, ‘늘같음 상태’ 등 새로운 단어를 만들어 쓴 작가의 문체가 작품을 더욱 빛내 준다.
+
+'우리는 많은 것을 통제할 수 있었지. 동시에 많은 것들은 포기해야 했단다.'
+미래 사회를 통해 다시 바라보는 현대 사회의 문제들
+[기억 전달자]는 SF 소설이라는 형식, 현대 사회와 연결된 논쟁적인 소재로 청소년 문학에서 신기원을 연 작품이다. [멋진 신세계], [1984], [시녀 이야기] 등 미래 소설의 고전으로 자리 잡은 작품들은 미래를 다루면서도 지금 우리 사회의 모습에 대한 문제 제기를 한다는 점이 특징이다. 이와 마찬가지로 [기억 전달자]도 현실의 문제를 예리하게 지적하고 있다. 조너스가 사는 마을에서는 장애를 가지고 태어난 아기들이나 너무 나이가 든 노인들을 ‘임무 해제’라는 이름으로 안락사시킨다. 효율성을 헤친다는 이유로 쌍둥이 중 체중이 적게 나가는 아기도 ‘임무 해제’시키고 사람들을 모두 색맹으로 만들어 색깔 구별도 없애 놓는다. 또한 이곳은 완벽한 산아 제한 사회인데 이를 위해 사람들은 성욕을 없애는 약까지 복용한다. 이를 통해 차이와 평등, 안락사, 장애인, 산아 제한, 국가의 통제 등 현대 사회에서 논란이 되고 있는 민감한 문제들에 대해 청소년 독자들이 생각해 볼 기회를 제시한다. [기억 전달자]는 아무리 선한 목적이라 하더라도 극단적인 통제와 질서는 결국 비인간성을 낳게 된다는 메시지를 전해 준다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-18작품명 : 작별하지 않는다      작가명 : 한강
+        (?,?,?,?,?,?,?,default)
+18작품명 : 신들은 죽임당하지 않을 것이다      작가명 : 켄 리우 	내용 : 
+<신들은 죽임당하지 않을 것이다> 『종이 동물원』의 작가 켄 리우의 한국판 두 번째 오리지널 SF 단편선
+드론 전쟁, 가상현실. 임진왜란, 외계행성 등 장르와 무대를 자유로이 넘나드는 11편의 단편
+
+동시대 가장 주목받는 SF 환상문학 작가 켄 리우의 세 번째 단편 선집이 황금가지에서 출간되었다. 권위의 휴고상, 네뷸러상, 세계환상문학상을 40년 만에 첫 동시 수상한 대표작 「종이 동물원」으로 국내에서도 많은 독자를 확보한 켄 리우의 미출간 단편 중 엄선하여 엮은 두 번째 한국판 오리지널 단편집이다. 『종이 동물원』으로 제13회 유영 번역상을 수상한 장성주 씨가 직접 엮었으며, 이번 선집에서 켄 리우는 대체역사, 실크펑크, 스팀펑크, 사이버펑크 등 다양한 장르의 단편을 선보이는 한편, 임진왜란과 명청교체기에서부터 근미래까지 다양한 시대와 소재를 활용한다. 임진왜란 당시, 이여송의 평양성 전투 때 공명등에 사람이 타고 하늘에서 상대를 정찰해 큰 공을 세웠다는 설정의 「북두」, 인간의 정신을 데이터 세계로 보내고 육신을 버리게 된 인류의 변모 과정을 풍부한 상상력을 담아 그려낸 '싱귤래리티 3부작'의 프리퀄격인 '포스트 휴먼 3부작', 전쟁중 드론 조종사의 PTSD(외상후 스트레스 장애)를 소재로 한 「루프 속에서」, 대체역사소설에게 시상하는 사이드와이즈상을 수상한 「<장거리 화물 비행선>-《퍼시픽 먼슬리』2009년 5월호 '이동의 기록' 코너에 수록」, 양주 대학살을 두 여성 주인공으로 하여 풀어낸 「풀을 묶어서라도, 반지를 물어 와서라도」 를 비롯하여, 슈퍼히어로와 빌런을 소재로 한 「카산드라」, 외계 행성의 고대 지적 생명체의 흔적을 다룬 「그 짐은 영원히 그대 어깨 위에」, 천사와 신 등 종교적 믿음을 과학적으로 풀어내려 한 남자를 주인공으로 쓴 「1비트짜리 오류」, 일본 제국주의 시대를 배경으로 한 스팀펑크 판타지 장르인 「우수리 불곰」 등 총 11편의 단편이 수록되어 있다.
+
+"제가 쓴 책을 펼쳐 주신 한국의 모든 독자 여러분, 감사합니다. 이처럼 시간과 공간, 언어, 문화를 넘어 쓰는 이와 읽는 이가 대화를 나눌 때 우리는 비로소 가장 인간다워진다고, 저는 느낍니다. 우리는 이야기를 짓는 종(種)이니까요." -『어딘가 상상도 못 할 곳에, 수많은 순록 떼가』(켄 리우 오리지널 단편집 1편)의 저자 머리말 중
+
+
+드론 전쟁, 디지털 휴먼, 탄소 무역 전쟁 등 현실에 기반한 근미래 SF
+
+첫 수록 작품인 「루프 속에서」는 어릴적, 전투 드론 조종사였던 아버지의 PTSD로 인해 붕괴된 가정에서 자라난 카이라가 드론 조종사의 PTSD 피해를 경감하기 위한 로봇 제작으로 인해 벌어진 사건을 다루고 있다. 최근 우크라이나·러시아 전쟁이 드론 대리전으로 펼쳐지고 있는 등 현대전의 양상이 빠르게 바뀌고 그로 인해 생길 수 있는 여러 가능성을 켄 리우는 「루프 속에서」를 통해 담아낸다. 인간의 정신을 데이터 세계로 보내고 육신을 버리게 된 인류의 변모 과정을 그려낸 「싱귤래리티 3부작」의 프리퀄인 「포스트 모던 3부작」 중 「신들은 순순히 죽지 않을 것이다」는, 디지털화된 초기의 인격체들 사이에 벌어진 사이버 전쟁을 소재로 하고 있다. 디지털 인격들은 저마다의 능력으로 인류를 파괴하거나 보호하는 역할을 하고, 이는 결국 핵전쟁 등 인류의 실체적 위협으로 이어지는 등 지금까지 상상할 수 없던 새로운 형태의 전쟁을 그려낸다. 최근 인공지능의 빠른 성장으로 디지털 가상 인격체에 대한 관심이 커지는 상황에서, 켄 리우의 '포스트 휴먼 3부작'과 '싱귤래리티 3부작'은 곧 다가올 미래에 대한 하나의 예견서처럼 읽힌다. 「장거리 화물 비행선」은 중국 경쟁 기업에 맞서 미국의 국내 생산자를 보호하기 위해, 환경 운동 단체의 요구라는 핑계로 화물기에서 배출하는 탄소에 관한 규제를 정했다가 태양광을 이용한 중국산 화물 비행선이 미국 하늘을 뒤덮게 된 상황을 그려내어, 에너지 규제에 관한 세계적인 흐름이 어떠한 결과를 낳을지에 대한 저자의 상상을 담아내기도 하였다.
+
+
+동북아시아 3국의 역사를 다룬 세 편의 단편소설들
+
+켄 리우는 이미 발표된 여러 단편을 통해 일제국주의 시대의 마루타, 위안부, 미서부 개척기의 중국인, 스팀펑크로 풀어낸 19세기 홍콩, 타이완의 2.28 사건 등 동북아시아 역사에 깊은 상처로 남은 여러 소재를 SF 등의 장르로 풀어내 왔다. 이번 단편집에선 각기 중국, 한국, 일본을 무대로 한 단편소설 하나씩을 발표하였다. 명나라 말기, 청나라 군대에 의해 중국 양주에서 벌어진 대규모 학살 사건을 무대로 한 「풀을 묶어서라도, 반지를 물어 와서라도」, 조일 전쟁이었던 임진왜란을 명나라의 만력제와 이여송을 중심으로 풀어내며, 이순신의 활약상이나 거북선 등을 함께 묘사한 「북두」, 20세기 초를 배경으로 자신의 가족을 몰살한 곰을 잡기 위해 만주까지 오게 된 일본인 박사와 군인을 등장시킨 「우수리 불곰」 등, 저자의 동북아시아에 대한 꾸준한 관심이 빛을 발하는 작품들이 이번 단편집에 수록되어 있다.
+
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-19작품명 : 유령의 마음으로      작가명 : 임선우
+        (?,?,?,?,?,?,?,default)
+19작품명 : 1984      작가명 : 조지 오웰 	내용 : 
+<1984> 인간의 자유의지와 감정마저 지배하는 디스토피아 사회의
+충격적이고 강력한 경고 메시지!
+
+국가가 개인을 통제하는 전체주의의 위험성을 경고한 《1984》는 조지 오웰이 남긴 마지막 정치소설이다. 1984년 핵전쟁 이후의 오세아니아라는 가상의 전체주의 사회를 설정하여 언어를 제한해 개인의 사고를 통제하고, 과거의 기록을 끊임없이 수정하며, 세뇌와 억압을 통해 거짓을 진실이라 강요하는 암울한 디스토피아를 치밀한 필치로 그려냈다. 당의 폭력적인 통제와 주인공 윈스턴의 처절한 저항을 통해 극단적인 전체주의 체제 아래에서 권력이 어떤 방법으로 여론을 조작하고 군중을 진실에서 눈 돌리게 하는지, 그 속에서 인간의 자유와 존엄성이 어떻게 위협받는지를 사실적이고 구체적으로 표현했다. 감시 사회, CCTV와 사생활 침해, 정치권력에 의한 언론 조작 등 오늘날에도 끊임없이 제기되는 사회 문제를 선견한 작품이다. 
+
+1984년 오세아니아는 당과 총수 빅 브라더에 대한 맹목적인 충성을 강요하는 극단적인 전체주의 사회다. 언제 어디서나 사상경찰, 텔레스크린, 마이크가 당원의 사생활을 감시하고 당의 영속성을 위해 과거의 사건을 날조하고 말살해 진실을 왜곡한다. 인간의 내밀한 본능까지 통제하는 체제에 회의를 느낀 윈스턴은 은밀히 당의 전복을 꿈꾸지만, 사상경찰에 붙잡혀 지독한 고문을 당하며 인간의 존엄성을 위협받게 되는데….
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-20작품명 : 낫 서울 낫 소울      작가명 : 전혜진
+        (?,?,?,?,?,?,?,default)
+20작품명 : 개정판 | 나를 보내지 마      작가명 : 가즈오 이시구로 	내용 : 
+<개정판 | 나를 보내지 마> “나한테 영혼이 없다고 생각하는 사람도 있나요?”
+복제 인간을 소재로 인간의 존엄성을 진지하게 성찰한 소설
+
+2017년 노벨 문학상 수상자이자 현대 영미권 문학을 이끌어 가는 거장 가즈오 이시구로의 대표작, 『나를 보내지 마』가 전면적 번역 개정을 거쳐 새로운 디자인과 판형으로 출간되었다. 이 책은 1990년대 후반 영국, 외부와의 접촉이 일절 단절된 기숙학교 ‘헤일셤’을 졸업한 후 간병사로 일하는 캐시의 시선을 통해 인간의 장기 이식을 목적으로 복제되어 온 클론들의 사랑과 성, 슬픈 운명을 그리고 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-21작품명 : 언러키 스타트업      작가명 : 정지음
+        (?,?,?,?,?,?,?,default)
+21작품명 : 사라진 소녀들의 숲      작가명 : 허주은 	내용 : 
+<사라진 소녀들의 숲> 전 세계인을 사로잡은 흥미진진하고 매력적인 한국적 서사
+마지막까지 읽기를 멈출 수 없는 몰입감!
+
+“진실에 가까워질수록 더해가는 긴장감과 통쾌함, 동시에 페이지가 줄어드는 아쉬움 탓에 책을 읽는 동안 다채로운 감정으로 몸 둘 바를 몰랐다.” - 소설가 천선란 추천
+
+★★★ 미국 경제 전문지 『포브스』가 선정한 2022년 가장 기대되는 작가 ★★★
+★★★ 2022년 화이트 파인 어워드 최종 후보 ★★★
+★★★ 2년 연속 에드거 앨런 포 어워드 최종 후보 ★★★
+★★★ 미국도서관협회 선정 최고의 소설 ★★★
+
+한국의 역사와 문화에 바탕을 둔 작품 분위기, 탄탄한 서사 속에 치밀한 미스터리 장치를 가미한 필력으로 한국이 아닌 세계에서 먼저 이름을 알린 작가 허주은의 장편소설 『사라진 소녀들의 숲』이 미디어창비에서 출간되었다. 작가는 이번 작품의 배경에 한국인들에게도 생소한 역사, 조선 세종 대까지 존재했던 공녀(貢女) 제도를 앉혀놓는다. 이에 얽힌 제주 한 마을의 비극, 그 비극에 긴박하게 연결된 가족사, 나아가 가부장 시대 조선 여성들의 삶을 다층적으로 엮어내며 미스터리한 사건의 중심으로 독자들을 끌어들인다. 
+가장 먼저 해외 독자들이 한국 중세를 배경으로 한 이 낯선 이야기에 빠져들었다. 2021년 북미에서 먼저 출간된 『사라진 소녀들의 숲』(The Forest of Stolen Girls)은 2022년 캐나다 최대 규모 독서 프로그램인 ‘독서의 숲’ 화이트 파인 어워드 최종 후보, 2021년과 2022년 에드거 앨런 포 어워드 최종 후보에 올랐다. 그뿐 아니라 미국도서관협회(YALSA) 청소년을 위한 최고의 소설, 청소년도서관조합(JLG) 추천 도서로 연속 선정되는 등 국내 출간 전부터 이미 성인은 물론 청소년 독자들에게까지 뜨거운 주목을 받고 있는 작품이다.
+토론토대학교에서 역사와 문학을 전공한 이력답게 그의 작품은 역사, 특히 한국의 역사를 소재로 삼고 있는 것이 특징이다. 『뼈의 침묵』(The Silence of Bones),『붉은 궁』(The Red Palace) 등 연이어 발표한 소설 모두 한국의 역사에 대한 깊은 이해를 바탕으로 쓰여졌다. “지금 제가 쓰는 책들은 전부 한국 역사에 바치는 러브레터”라고 밝히는 저자는 ‘한국’이라는 단어가 낯선 모든 이들을 ‘가장 한국적인 이야기’로 사로잡으며 한국계 베스트셀러 작가로서 입지를 굳혀가고 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-22작품명 : 더블      작가명 : 정해연
+        (?,?,?,?,?,?,?,default)
+22작품명 : 변신      작가명 : 프란츠 카프카 	내용 : 
+<변신> 올림푸스 세계문학전집 - 고전 읽기의 즐거움
+"간단해 보이는 이야기들이 아주 강력한 힘으로 다가오는가 하면, 아름답고 지혜로운 분위기가 나를 감싸고, 깊은 생각을 불러일으킨다."
+
+어제, 오늘 그리고 내일도 함께 할 불멸의 명작들을 엄선하여 새로운 번역으로 펴내는 올림푸스 세계문학 5권 변신을 소개합니다.
+
+《변신 Metamorphosis》
+
+《변신》(원제: Die Verwandlung)은 프란츠 카프카의 중편 소설이다. 어느날 아침 눈을 뜨고 나니, 거대한 벌레로 변해버린 한 남성과 그를 둘러싼 가족들의 전말을 그린 소설이며, 카프카의 작품 중 가장 널리 알려져 있다. 1912년 집필하여, 1915년 쿠르트 볼프 출판사에서 출판하였다.
+
+변신은 카프카가 살아있을 때 출판된 소수 작품 중의 하나이다. 벌레로 변한 주인공에게 벌어지는 사건을 냉정하면서도 사실적인 문체로 잘 풀어나갔다. 주인공이 처해 있는 상황은 인생이 어떻게 전개될지 모르는 절망적인 생활을 상징하는 것이며 우리들의 억압된 소망들을 표현하기도 한다. 공포로 다가온 주인공의 모습을 통해 가족들의 비인간성이 드러나며 가족의 참모습이 무엇인지 다시 한번 생각해보게 한다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-23작품명 : 2022 김승옥문학상 수상작품집      작가명 : 편혜영
+        (?,?,?,?,?,?,?,default)
+23작품명 : 불과 피 : 얼음과 불의 노래외전      작가명 : 조지 R. R. 마틴 	내용 : 
+<불과 피 : 얼음과 불의 노래외전> 드라마 [왕좌의 게임] 프리퀄 철왕좌 최초의 주인들, 드래곤 가문의 연대기가 시작된다 [얼음과 불의 노래] 300년 전 타르가르옌 가문의 연대기 드라마 [왕좌의 게임] 시리즈의 원작 [얼음과 불의 노래] 시리즈의 프리퀄. [얼음과 불의 노래]는 가상의 대륙 웨스테로스를 무대로 왕가 타르가르옌 가문을 내쫓고 왕좌에 앉은 바라테온 가문의 이야기로 시작하는 대서사시이다. 그간 본편에서 타르가르옌 가문의 이야기는 소설의 큰 축을 차지하는 동시에 많은 궁금증을 자아냈다. 그들은 왜 웨스테로스 대륙으로 왔던 걸까? 어떻게 그들이 일곱 개의 나라를 하나의 왕국으로 만들 수 있었을까? 그들은 왜 몰락할 수밖에 없었는가? 『불과 피』는 본편에 흩뿌려진 여러 가지 단서들을 맞춰 어림짐작하던 그들의 역사를 제대로 만나볼 수 있는 기회다. ‘최고학사 길데인’이라는 인물이 쓰고 조지 R. R. 마틴이 옮겼다는 식으로 가상의 역사서 형식을 취하면서 본편과는 다른 방식으로 진행되며, 만화판 [스타워즈] [아바타] 시리즈 등에서 현실감 넘치는 그림을 그렸던 더그 휘틀리의 삽화가 80여 장 포함되었다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-24작품명 : 마음에 없는 소리      작가명 : 김지연
+        (?,?,?,?,?,?,?,default)
+24작품명 : 내일 또 내일 또 내일      작가명 : 개브리얼 제빈 	내용 : 
+<내일 또 내일 또 내일> 플레이 버튼을 누르면 영원히 다시 시작되는
+내일 또 내일 또 내일
+
+★ 2022 아마존 올해의 책 1위 ★ 40주 이상 <뉴욕 타임스> 베스트셀러
+★ 영미권 100만 부 이상 판매 ★ 파라마운트 픽처스 제작 영화화 확정
+★ 지미 팰런 투나잇 쇼 북클럽 선정 ★ 굿리즈 초이스 어워드 수상
+
+   책으로 이어진 사람들의 따뜻한 이야기를 그린 세계적인 베스트셀러 『섬에 있는 서점』(2014)과 여성의 현실을 생생히 그려낸 『비바, 제인』(2017)으로 유머러스한 문장, 창의적인 구성, 삶에 대한 깊은 통찰을 선보이며 독자와 평단을 사로잡은 개브리얼 제빈의 장편소설 『내일 또 내일 또 내일』(2022)이 출간되었다. 소꿉친구인 두 사람이 함께 게임을 만들게 되면서 일어나는 일을 다룬 이 책은 대학생들이 기발한 아이디어와 플로피디스크 하나로 게임계를 뒤집을 수 있었던 1990년대 ‘문화의 개척시대’를 배경으로 한 청춘 로맨스이자 성장물이다. 지적이면서도 다정한 제빈의 작품세계를 집약적으로 보여주는 마스터피스로, 롤플레잉 게임(RPG), 이인칭시점, 인터뷰, 게임 채팅 등 다양한 형식을 활용해 일과 사랑, 청춘이라는 삶의 주요한 키워드를 탐구한다. 2022년 아마존 올해의 책 1위에 선정되고 40주 이상 <뉴욕 타임스> 베스트셀러 자리를 지킨 현재 미국에서 가장 뜨겁고 현대적인 소설이다.
+
+   셰익스피어의 희곡 <맥베스> 5막 5장의 독백에서 온 제목 ‘내일 또 내일 또 내일’은 게임이 지닌 무한한 재시작의 속성을 암시한다. 언제나 새로운 내일이 있고, 무엇도 영원하지 않다는 믿음은 <맥베스>에서 비관적으로 독해되는 것과는 달리 제빈의 소설에서 현재에 대한 긍정과 무한한 가능성으로 확장된다. 『내일 또 내일 또 내일』은 또다른 세계, 또다른 선택과 결과, 또다른 삶이라는 무궁무진한 가능성을 그려보는 게이머의 유연한 사고와 태도를 우리에게 전하는, 모든 면에서 바다처럼 깊고 방대한 작품이다.
+
+“게임이 뭐겠어?” 마크스가 말했다. “내일 또 내일 또 내일이잖아. 무한한 부활과 무한한 구원의 가능성. 계속 플레이하다보면 언젠가는 이길 수 있다는 개념. 그 어떤 죽음도 영원하지 않아, 왜냐하면 그 어떤 것도 영원하지 않으니까.” _본문 중에서
+
+
+   우리를 절망에서 구원하는 건,
+   기꺼이 놀고자 하는 의지
+
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-25작품명 : 트렁크      작가명 : 김려령
+        (?,?,?,?,?,?,?,default)
+25작품명 : 콜 미 바이 유어 네임      작가명 : 안드레 애치먼 	내용 : 
+<콜 미 바이 유어 네임> 루카 구아다니노 감독, 제임스 아이보리 각본, 티모시 샬라메·아미 해머 주연 영화
+《콜 미 바이 유어 네임(CALL ME BY YOUR NAME)》 원작 소설
+
+《뉴욕 타임스》 베스트셀러
+《USA 투데이》 베스트셀러
+《로스앤젤레스 타임스》 베스트셀러
+《벌처 북클럽》 추천 도서
+《워싱턴 포스트》 선정 올해 최고의 책
+《시카고 트리뷴》 선정 올해의 책
+《시애틀 타임스》 선정 올해의 책
+《뉴욕 타임스》 선정 올해의 주목할 만한 책
+《샌프란시스코 크로니클》 선정 올해의 주목할 만한 책
+
+‘첫사랑의 마스터피스’ 안드레 애치먼의 감각적인 언어로 열일곱 살 엘리오와 스물네 살 올리버 두 남자의 사랑을 섬세하게 그려 낸 장편소설. 2007년 해외 출간 당시 람다 문학상 게이 소설 부문에서 수상하는 등 세계 언론의 극찬을 받았다. 그리고 10년 후 영화 《콜 미 바이 유어 네임(CALL ME BY YOUR NAME)》으로 재탄생되면서 제90회 미국 아카데미상 각색상 수상을 포함한 최우수 작품상, 남우주연상, 음악상(〈Mystery of Love〉) 부문 노미네이트 외에 세계 유수의 영화제 57관왕, 193개 부문에 노미네이트되며 다시 한번 신드롬을 일으켰다.
+
+위대한 사랑 이야기. 이 아름다운 소설의 모든 구절, 아픔, 어지러이 밀려오는 감정은 마음속에서 진실로 울려 퍼진다.
+-마이클 업처치, 《시애틀 타임스》
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-26작품명 : 고요한 우연      작가명 : 김수빈
+        (?,?,?,?,?,?,?,default)
+26작품명 : 부서진 대지 3부작 세트      작가명 : N. K. 제미신 	내용 : 
+<부서진 대지 3부작 세트> 60여 년 역사의 휴고 상 최초, 3년 연속 최우수 장편상 수상
+인류의 뿌리 깊은 차별의 역사를 은유한 혁명적인 판타지 3부작
+
+세계 최고 권위의 SF 문학상인 휴고 상을 3년 연속으로 수상한 「부서진 대지」 3부작의 첫 번째 작품 『다섯 번째 계절』이 출간되었다. 2016년,『다섯 번째 계절』로 아프리카계 미국인 작가로서는 처음으로 휴고 상 최우수 장편상을 수상한 N. K. 제미신은 다음 두 해까지 연이어 수상에 성공하는데, 이는 1953년 휴고 상이 시작된 이래 최초의 기록으로, 오랫동안 백인 남성 작가가 주류를 이루던 이 장르에 부는 변화를 보여 주는 사건이다. 지질학적 개념을 차용한 독특한 세계관과 설정을 바탕으로 한 「부서진 대지」는 강력한 능력을 지녔지만 사회적으로 핍박당하는 종족인 ‘오로진’의 여성이 펼치는 모험과 투쟁 속에 인종 차별과 문화적 충돌이란 주제를 정교하게 담아 내며 독자와 평단의 열렬한 반응을 얻었다. 현재 전 세계 20여 개국에 판권이 판매되었으며, 미국 TNT 채널에서 드라마화도 준비 중이다. 후속작인 『오벨리스크 관문(가제)』과 『돌빛 하늘(가제)』은 2019년 하반기와 2020년 상반기에 순차적으로 출간될 예정이다.
+
+재앙의 계절이 닥친 대륙,
+대지를 움직일 힘을 지닌 세 여자의 삶이 교차하는 순간
+모든 것이 산산이 부서진다!
+
+겨울, 봄, 여름, 가을. 다섯 번째 계절은 죽음이자 모든 계절의 군주다._본문 중에서
+
+「부서진 대지」의 무대는 대지모신과 정반대되는 ‘아버지 대지’란 개념이 지배하는 혹독한 세계, 그 안에서도 ‘고요’라는 이름으로 불리는 거대한 초대륙이다. 이곳에는 최소 반년, 길게는 수 세대가 지나도록 지진 활동이나 다른 대규모 환경 변화가 지속적으로 일어나는 재해의 시기인 ‘다섯 번째 계절’이 있다. 인류 중에는 ‘오로진’이라는 소수의 부류가 존재하는데, 이들은 지진 활동과 관련된 에너지를 조종하는 특수 능력인 조산력(造山力, Orogeny)을 지닌 채 태어난다. 그러나 대다수의 인간들은 거대한 능력이 있으나 때로 이 힘을 통제하지 못하는 오로진을 ‘로가’라는 멸칭으로 부르며 적대시하고 두려워하며, 심지어는 오로진으로 발각되는 어린아이를 살해하기도 한다. 그런 한편 대륙 중심지에는 어린 오로진을 모아 가혹한 훈련을 시키며 순종적으로 길들인 후 철저하게 관리하며 착취하는 기관 펄크럼이 있다.
+
+『다섯 번째 계절』은 능력을 숨기고 작은 마을에서 평범하게 살아가다가 자식을 잃고 만 에쑨, 부모에게서 버림받고 낯선 이의 손에 이끌려 새로운 인생을 시작하게 된 다마야, 펄크럼의 의무에 속박된 채 임무를 수행하러 나선 시에나이트, 이 세 오로진 여성의 시점을 넘나들며 진행된다. 가혹한 운명에 따라 모험을 떠나게 되는 세 인물의 관계가 차츰 밝혀질수록, 억겁의 세월 동안 오로진이 차별과 멸시를 당하게 된 근원과 대륙에 닥친 계절의 비밀 역시 실체를 드러낸다.
+
+
+SF․판타지의 새로운 황금기를 여는 작가, N. K. 제미신
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-27작품명 : 므레모사      작가명 : 김초엽
+        (?,?,?,?,?,?,?,default)
+27작품명 : 리틀 라이프 1      작가명 : 한야 야나기하라 	내용 : 
+<리틀 라이프 1> “상상조차 할 수 없는 인생이지만 
+그것도 인생이라고 말해주길” 
+전 세계 독자를 사로잡은 한 남자의 삶 
+
+2015 맨부커상 · 전미도서상 최종후보작
+커커스 문학상 수상작 
+뉴욕타임스· 워싱턴포스트 · 월스트리트저널 · NPR · 가디언 · 이코노미스트 
+외 25개 언론사 선정 ‘올해의 책’ 
+
+천 페이지를 압도하는 폭풍 같은 서사 
+2015년 맨부커상 최고의 화제작
+
+이 소설을 소개하는 가장 좋은 방법은, 너무나 흔한 관용구대로 “결코 손에서 놓을 수 없다”고 말하는 것이다. 독자를 두렵고 불편하게 하면서도 사로잡는 소설을 묘사할 더 적절한 표현은 없다. _커커스 문학상 선정단 
+
+영미권을 대표하는 문학상 맨부커상과 전미도서상 최종후보에 나란히 오르고, ＜뉴욕타임스＞ ＜워싱턴포스트＞ ＜가디언＞ ＜월스트리트저널＞을 비롯한 25개 언론사에서 ‘올해의 책’으로 꼽은 화제작 《리틀 라이프》가 한국어판으로 출간되었다. 영국과 미국의 대표 문학상 후보에 선정되기 전부터 독자들 사이에서는 “밤을 새워 읽었다” “천 페이지가 더 길었으면 하는 소설은 처음이다” “눈물이 나 몇 번을 읽다 멈춰야 했다” “충격적이고 가슴 아프다” “읽는 내내 매일 밤 이 소설에 관한 꿈을 꿨다” 같은 리뷰와 함께 이미 입소문이 퍼진 작품으로, 맨부커상 후보작으로 선정된 후 이례적으로 홈페이지에 응원 댓글이 달리며 독자들의 열렬한 지지를 받았다. 어린 시절 끔찍한 학대와 폭력의 트라우마를 간직한 비밀스러운 인물 주드의 이야기를 담은 《리틀 라이프》는 또한 그 소재의 선정성과 가차 없음으로 심사위원들 사이에서 가장 논쟁적인 작품이 되기도 했다. 
+현대 소설로는 드물게 요약본과 해설서가 등장하고, 서평 사이트 ‘굿리즈’에 4만 명이 넘는 독자들이 별점 4점 이상의 평점을 남기고 있으며, 영화 ＜캐롤＞의 배우 루니 마라가 추천 도서로 꼽는 등, 출간된 지 일 년이 넘은 지금도 여전히 독자들의 가슴에 큰 반향을 일으키고 있다. 
+
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-28작품명 : 달까지 가자      작가명 : 장류진
+        (?,?,?,?,?,?,?,default)
+28작품명 : 시녀 이야기 세트(전 2권)      작가명 : 마거릿 애트우드 	내용 : 
+<시녀 이야기 세트(전 2권)> 시대를 뛰어넘는 고전 걸작 '시녀 이야기'의 처음과 마지막, 
+그 모든 이야기를 한 번에 만나다! 
+
+1985년 출간 이후 디스토피아 소설의 교본으로 꼽히는 『시녀 이야기』의 후속 신작 『증언들』 출간을 기념해, 시녀 이야기 전자책 세트를 새롭게 선보인다. 
+가상의 미국 정권을 무대로 성과 권력의 어두운 관계를 적나라하게 드러낸 스테디셀러이자, 2017년 전 세계적인 인기를 모은 드라마 「핸드메이즈 테일」의 영향으로 미투 운동뿐 아니라 도널드 트럼프 대통령에 대한 반대 운동의 상징이 된 『시녀 이야기』를 필두로, 그로부터 15년 뒤의 이야기를 그리고 있는 후속 신작 『증언들』을 할인가로 한데 구성하였다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-29작품명 : 있을 법한 모든 것      작가명 : 구병모
+        (?,?,?,?,?,?,?,default)
+29작품명 : 대지      작가명 : 펄 벅 	내용 : 
+<대지> 중국 농민의 운명을 그린 웅혼한 일대서사시 
+몰려오는 새시대 물결 몸부림치는 사랑 증오 슬픔 고뇌 인간군상 
+중국인의 영혼을 꿰뚫는 현대문학 불후 거대로망! 
+
+「대지」는 영원하여라! 
+펄 벅의「대지」는〈대지(The Good Earth, 1931)〉,〈아들들(Sons, 1932)〉,〈분열된 집안(A House Divided, 1935)〉, 3부작으로 이루어져 있다. 땅을 사랑하는 가난한 농부 왕룽과 그 아들들, 손자들로 이어지는 3대에 걸친 이야기이다.〈대지〉는 1931년 출판되자마자 퓰리처상을 수상했다.〈아들들〉과〈분열된 집안〉은 그 속편으로 발표된 것이다. 
+펄 벅의 중국 국토와 인간에 대한 깊은 지식은 독보적이며, 「대지」를 제외한 다른 많은 작품 또한 그 이해와 통찰은 서양인 작가로서는 최고의 수준이다. 이것은 그녀의 긴 세월에 걸친 중국생활의 체험이 모두 그 원천이 된 것이다. 
+1938년 노벨문학상 선고위원회의 추천문에는 ‘중국 농부의 생활을 풍부하게, 서사시적으로 묘사한 매우 뛰어난 훌륭한 작품이다’라고 쓰여 있다. 노벨문학상은「대지」를 필두로 하는 중국을 소재로 한 일련의 문학 업적에 수여된 것이지만,「대지」 하나만으로도 노벨문학상을 수상할 만하다는 느낌을 주는 것은,「대지」가 그녀의 부동의 걸작이라는 사실을 여실히 보여 주고 있다. 
+
+땅에 영혼을 바친 농민들의 서사시 
+중국인의 강한 생활력은 잡초의 억세고 질긴 느낌에 비유된다. 잡초는 아무 땅에서나 자라며, 땅이 주는 자양을 흡수하며 생명을 이어간다. 대지에 매달려 있으면 어떻게든 살아갈 수 있기 마련이다. 바람이 불면 바람 따라 나부끼면 된다. 발로 밟히는 것도 순간만 참으면 몸은 본디대로 일어선다. 때로는 들불이라는 재난을 만나 모두 불타 버리더라도 흙 속에 박힌 뿌리는 다시 생명을 이어낸다. 
+〈대지〉의 주인공 왕룽은 부지런하고 땅을 사랑하는 가난한 농군이다. 왕룽에게 땅은 단지 재산이 아니다. 그를 낳아주고 길러주고 고통을 부드럽게 감싸주는 어머니이며, 자신은 물론 자손들의 생명을 이어가게 도와주는 신의 선물이다. 
+순종의 여인 오란을 아내로 맞이하고, 몰락한 지주 황부자집 토지를 사들이며 풍족한 삶을 살게 되지만, 하늘이 내려준 토지의 풍요로움도 잠시뿐, 곧 엄청난 메뚜기떼가 대지를 휩쓰는 가뭄으로 일가족은 생사의 고비에 놓인다. 왕룽은 가족을 데리고 남쪽 도시로 몸을 피한다. 그곳에서 구걸과 막노동의 고된 세월을 보내지만, 고향에 두고 온 자신의 논밭을 떠올리며 언젠가 돌아갈 희망의 끈을 놓지 않는다. 
+‘대지는 남쪽 도시에서 돌아왔을 때 그의 마음의 병을 고쳐 주었다. 태양은 머리 위에 빛나며 그의 괴로움을 잊게 했고, 여름의 더운 바람은 부드럽게 그를 감싸 주었다.’ 
+토지는 왕룽에게 행운을 가져다주어, 그는 많은 땅을 가진 대지주가 된다. 세월이 흐른 뒤 늙고 병든 왕룽은 자리에 누워, 자식들이 땅을 팔기 위해 의논하는 소리를 듣고 이렇게 띄엄띄엄 말한다. “땅을 팔기 시작하면, 집안은 끝장이야.” “우리는 땅에서 태어났어. 그리고 다시 땅으로 돌아가야만 한다. 땅을 갖고 있으면 살아갈 수 있다. 땅은 누구에게도 뺏겨서는 안된다…….” “만일 땅을 파는 날, 그것은 세상의 마지막이다.” 
+〈대지〉에는 여러 유형의 여성이 등장한다. 오란은 대지주인 황부자집 계집종이었으나 팔려서 왕룽의 아내가 된다. 말수는 적으나 지혜가 있다. 남편을 만나 굶주림과 갖은 고생을 견뎌내고, 나이가 들어 외모가 볼품없다고 남편에게 부당한 대접을 받는 수모를 겪으면서도, 불평 한 마디 하지 않고 묵묵히 눈물을 삼키며 인종(
+?F)의 세월을 보낸다. 오란은 착한 성품과 인내를 미덕으로 아는 중국 여인의 모습을 여실히 보여준다. 
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-30작품명 : 절연      작가명 : 정세랑
+        (?,?,?,?,?,?,?,default)
+30작품명 : 올리브 키터리지      작가명 : 엘리자베스 스트라우트 	내용 : 
+<올리브 키터리지> 바닷가 마을 사람들의 일상을 그린 연작소설
+2009년 퓰리처상 수상작
+"우리 인생의 여러 나날들의 의미를 묻는 소설"(김연수)
+
+올리브 키터리지라는 여성을 중심으로 미국 메인 주의 작은 마을 크로스비 사람들의 이야기를 열세 편의 단편에 담아낸 연작소설이다. “퉁명스럽고 허점이 많으면서도 매혹적인 인물 올리브가 있고, 독자의 정서에 진하게 호소하는 세련된 작품”이라는 평을 들으며 2009년 퓰리처상을 수상한 작품이다. 소금기 머금은 바닷가 마을 사람들의 평범한 인생에 대한 가슴 시리도록 절절한 이야기가 펼쳐진다.
+
+이 책에는 퉁명스럽고 무뚝뚝하며 차갑고 강인한 여인 올리브를 축으로 마을의 다양한 사람이 등장한다. 모두에게 친절하고 상냥한, “대양을 닮은 큰 눈으로” 세상을 바라보는 사람 좋은 남자 헨리(「약국」), 떠나간 옛사랑의 희미한 그림자를 붙들고 살다 오랜만에 해후한 옛 연인을 통해 “자신이 뭔가를 너무 늦게 깨달았다고, 그리고 너무 늦었을 때에야 뭔가를 깨닫는 것이 인생일 거라”는 깨달음을 얻는 앤절라(「피아노 연주자」), 와병 중이던 남편을 잃고 장례식을 치르다 병이 나으면 함께 가자며 남편과 꿈에 부풀어 준비했던 여행 바구니를 보며 자신을 책망하는 말린(「여행 바구니」) 등 저마다 삶이 남긴 생채기를 끌어안고 살아가는 인물들이다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-31작품명 : 오버 더 초이스 세트(전2권)      작가명 : 이영도
+        (?,?,?,?,?,?,?,default)
+31작품명 : 템페스트      작가명 : 윌리엄 셰익스피어 	내용 : 
+<템페스트> 셰익스피어의 마지막 작품
+외딴섬에서 하루 동안 벌어지는 화해와 용서의 한바탕 인생 찬가
+
+문학사상 가장 위대한 작가이자 가장 사랑받는 극작가 셰익스피어의 마지막 작품이다. 셰익스피어 연구가로 큰 족적을 남긴 이경석 교수(서울대학교 영문과)가 번역을 맡아 최대한 원전 그대로 접할 수 있도록 변역했다. 『템페스트』는 셰익스피어의 예술적 상상력이 마음껏 드러난, 복수, 사랑, 용서 그리고 마법이 어우러진 인생찬가이다.
+
+이 작품은 동생에게 속아 공국을 빼았기고 어린 딸과 함께 무인도에 버려진 주인공이 마법의 힘으로 복수의 기회를 잡지만, 결국 사랑의 힘으로 용서와 화해에 이르는 이야기를 그리고 있다. 은퇴를 앞둔 노작가의 세계관을 엿볼 수 있는 『템페스트』는 유한한 삶의 덧없음과 생의 아름다움을 예찬한 만년의 걸작이다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-32작품명 : 이 방에서 1년 버티면 1억      작가명 : 경민선
+        (?,?,?,?,?,?,?,default)
+32작품명 : 애거서 크리스티 전집 세트 A (1~10)      작가명 : 애거서 크리스티 	내용 : 
+<애거서 크리스티 전집 세트 A (1~10)> 추리의 여왕 애거서 크리스티의 유작. 크리스티가 죽은지 21년이 지난 1997년에야 비로소 발굴된 미간행 작품 일곱 편과 푸아로가 등장하는 단편 두 편의 초고가 수록되어 있다. 트리스티의 첫 작품인 <꿈의 집>이 포함된 이 초기 작품집은 크리스티 작품의 생성 과정을 엿보게 한다. 
+
+당시의 많은 작가들이 그랬던 것처럼 크리스티 역시 1920년대와 30년대에 걸쳐 여러 잡지에 작품을 썼고, 그 중 대부분의 작품들이 단편집의 형태로 간행되었다. 이 새로운 단편집에 실린 작품들은 범죄 사건에서부터 어두운 연애담, 영적인 소재에 이르기까지 다양한 스타일을 넘나든다. 작품 하나 하나를 차별화하는 거장다운 그녀의 솜씨와 결말에 뜻밖의 반전을 포진해 두는 능력을 새삼 확인할 수 있다. 또한 단편 하나하나마다 수록된 작품에 대한 간단한 해설 및 뒷이야기들은 그동안 미처 몰랐던 크리스티의 인간적인 좌절을 보여준다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-33작품명 : 개정판｜나는 나를 파괴할 권리가 있다      작가명 : 김영하
+        (?,?,?,?,?,?,?,default)
+33작품명 : 스켈레톤 크루 (상)      작가명 : 스티븐 킹 	내용 : 
+<스켈레톤 크루 (상)> 공포 소설의 거장 스티븐 킹의 두 번째 단편집. 스티븐 킹이 직접 쓴 두 편의 시를 포함하여, 모두 스물두 편의 작품이 두 권에 나뉘어 실렸다. 하권의 말미에는 작가 자신이 각 단편에 대해 짧은 논평을 달아놓았다.
+
+사회적 관심사를 공포의 주제로 삼아 조명하는 스티븐 킹 특유의 개성이 잘 살아 있는 단편집이다. 종교에 대한 광신이 빚어내는 혼돈, 얌전한 학생이 저지르는 무차별적인 살인, 정부나 군부대의 프로젝트라는 이름으로 비밀리에 이루어지는 실체 모를 실험, 그리고 가족 내 흔들리는 가장의 위상 등이 각 이야기의 주 소재이다. 스티븐 킹은 판타지, 호러, SF, 본격문학 등 다양한 장르를 오가며 대가의 필력을 한껏 발휘한다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-34작품명 : 당신에게 가고 있어      작가명 : 김보영
+        (?,?,?,?,?,?,?,default)
+34작품명 : 디아블로: 죄악의 전쟁 1권      작가명 : 리차드 A. 나크 	내용 : 
+<디아블로: 죄악의 전쟁 1권> 인간과 악마, 그리고 천사의 격돌! 
+블리자드 엔터테인먼트의 베스트셀러 게임 디아블로를 배경으로 한 소설 『디아블로: 죄악의 전쟁』 제1권 천부의 권리 편. 시간이 시작된 이래, 천국의 천사 군대와 지옥의 악마 무리들은 모든 피조물의 운명을 걸고 영원한 분쟁을 벌여왔다. 그 싸움은 인간의 세상으로 번져간다. 인류를 자신들의 편으로 끌어들이려 결심한 선과 악의 세력은 인간들을 얻으려 비밀스러운 전쟁을 펼친다. 인간의 운명을 영원히 바꿔놓을 그 싸움에 대한 이야기가 ‘죄악의 전쟁’이다. 칼과 마법, 시대를 초월한 본쟁을 그린 이 소설은 긴장감 넘치는 스토리 전개와 반전의 짜릿함이 돋보인다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-35작품명 : 그 많던 싱아는 누가 다 먹었을까      작가명 : 박완서
+        (?,?,?,?,?,?,?,default)
+35작품명 : 스티븐 킹 걸작선 05 - 스티븐킹 단편집 (옥수수 밭의 아이들 외)      작가명 : 스티븐 킹 	내용 : 
+<스티븐 킹 걸작선 05 - 스티븐킹 단편집 (옥수수 밭의 아이들 외)> 2003년 미국의 권위있는 문학상인 전미도서상(National Book award)에서 '미국 문단에 탁월한 공헌을 한 작가'에게 주는 상을 수상한 스티븐 킹. 그의 대표작들이 말끔한 편집과 새 번역, 단단한 양장본의 모습으로 재출간된다. 이번에 출간된 다섯 권 외에 국내 처음 소개되는 <세일럼스롯>을 포함, <미저리>, <스탠드>, <그린마일>, <잇>이 연달아 출간될 예정.
+
+스티븐 킹은 인간의 마음 속 깊은 곳에 감춰진 원초적이고 근원적인 공포를 탁월하게 묘사한다는 평을 듣는 작가이다. 가족간의 불화, 집단 따돌림 같이 일상에 자리한 사소한 문제들이 언제라도 생명을 위협할만큼 커다란 위기로 치달을 수 있음을 스피디한 필치로 생생하게 그려낸다.
+
+이 책에는 '맹글러', '금연 주식회사', '트럭', '부기 맨' 등 스티븐 킹의 대표적 단편 20개가 담겨 있으며, 책 말미에는 김성곤 교수의 해설 '스티븐 킹을 어떻게 읽을 것인가?'가 실려 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-36작품명 : 우리가 겨울을 지나온 방식      작가명 : 문미순
+        (?,?,?,?,?,?,?,default)
+36작품명 : 걸리버 여행기      작가명 : 조너선 스위프트 	내용 : 
+<걸리버 여행기> 
+
+아일랜드 최고 풍자작가의 대표적 풍자소설 
+―아일랜드문학사는 물론 영문학사의 명작이자 기작 
+
+영국에서 발간되자마자 폭발적인 인기를 누렸던 《걸리버 여행기》에서 저자는 당시 영국의 정치·사회의 타락과 부패를 통렬히 비판했으며, 인류의 어리석음을 철저하게 매도하고 풍자했다. 인간을 하나의 ‘짐승’으로 묘사한다든가 하는 개념은 당시의 사람들에게는 전혀 새롭고 기묘한 것으로서 독자들에게 놀라움과 함께 즐거움을 안겨주었다. 이 책은 활기에 넘치면서도 평이하고 수수한 필법으로 인해서 모든 연령의 사람들에게, 그리고 남녀를 가리지 않고 환영을 받았다. 사람들은 이 책에서 저자가 진정으로 전달하고자 하는 의도가 무엇인지를 알려 했으며 사람들이 모이는 곳마다 단골로 등장하는 화젯거리가 되기도 했다. 이미 익숙한 소인국과 거인국 이야기뿐 아니라 책 전체를 보아야 진짜 알맹이는 맛볼 수 있으며 특히 마지막 〈말의 나라 여행기〉를 읽어야 인간이 본질적으로 자비로운 존재인지 아니면 이기적인 존재인지, 사회적인 동물인지 아니면 좋은 먹이를 찾아다니는 데 여념이 없는 짐승인지, 그 본질에 대한 스위프트의 깊은 상념을 깨닫게 될 것이다. 또한 이 책은 300년 전의 원전 삽화에 “Sea of Corea"라는 표기가 있어 동해가 우리의 고유 영토임을 입증하는 귀중한 자료이며 더불어 독도의 진정한 주인이 대한민국이라는 사실을 강력하게 뒷받침해준다. 
+
+■《걸리버 여행기》 완역판 줄거리 
+
+주인공 걸리버는 차례로 소인국, 거인국, 하늘을 나는 섬, 영생인이 사는 나라, 말의 나라 등에 표류하여 색다른 경험을 한다. 릴리푸트라는 소인국에서 거인 취급을 받던 걸리버는 브로브딩낙이라는 거인국에서는 손가락만 한 소인의 입장이 되어 크기는 결국 ‘비교의 문제’임을 깨닫는다. 또 하늘을 나는 섬과 발니바비 국의 수도 라가도 등을 방문하여, 늘 깊은 사색에 잠긴 사람들과 불필요해보이는 연구에 종사하는 학자들, 죽은 자와 과거의 장면을 현실에 불러올 수 있는 마법사들을 만난다. 말의 나라에는 인간의 모습을 한 추악하고 어리석은 동물 야후와 존경스러운 품격과 예의를 갖춘 말의 모양 동물 후이늠을 만난다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-37작품명 : 고구려 1권      작가명 : 김진명
+        (?,?,?,?,?,?,?,default)
+37작품명 : 스티븐 킹 걸작선 02 - 샤이닝(상)      작가명 : 스티븐 킹 	내용 : 
+<스티븐 킹 걸작선 02 - 샤이닝(상)> 스티븐 킹이 쓴 40편의 장편 소설은 35개국에서 33개 언어로 번역되었으며, 70여개의 영화와 텔레비전 시리즈로 제작되었다. 그는 공포소설의 외피를 빌려, 삶과 죽음, 사랑과 집착, 도전과 좌절, 신과 인간 등 인간의 본질적 문제에까지 파고드는 훌륭한 작가이다.
+
+2003년 미국의 권위있는 문학상인 전미도서상(National Book award)에서 '미국 문단에 탁월한 공헌을 한 작가'에게 주는 상을 수상한 스티븐 킹. 그의 대표작들이 말끔한 편집과 새 번역, 단단한 양장본의 모습으로 재출간된다.
+
+영화포스터(부서진 문 사이로 보이는 잭 니콜슨의 기괴한 얼굴 표정)가 썩 인상적인 '샤이닝'은 한 호텔에 겨울철 관리인으로 들어간 평범한 교사 가족에게 벌어지는 이야기이다. 소설을 쓰면서 점점 미쳐가는 주인공의 심리를 예리하고 밀도 깊게 그려나간다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-38작품명 : 안녕 주정뱅이      작가명 : 권여선
+        (?,?,?,?,?,?,?,default)
+38작품명 : 스티븐 킹 걸작선 1 - 캐리      작가명 : 스티븐 킹 	내용 : 
+<스티븐 킹 걸작선 1 - 캐리> 2003년 미국의 권위있는 문학상인 전미도서상(National Book award)에서 '미국 문단에 탁월한 공헌을 한 작가'에게 주는 상을 수상한 스티븐 킹. 스티븐 킹은 인간의 마음 속 깊은 곳에 감춰진 원초적이고 근원적인 공포를 탁월하게 묘사한다는 평을 듣는 작가이다. 가족간의 불화, 집단 따돌림 같이 일상에 자리한 사소한 문제들이 언제라도 생명을 위협할만큼 커다란 위기로 치달을 수 있음을 스피디한 필치로 생생하게 그려낸다.
+
+브라이언 드 팔마 감독의 영화로 더 유명한 <캐리>는 염력을 지닌 소녀 캐리가 샤워실에서 첫 월경을 하는 충격적인 장면으로 시작한다. 광신도 어머니 밑에서 학대당하며 자란 캐리는 아이들의 집단 따돌림과 엄마의 광기로 인해, 마침내 끔찍한 사건의 중심이 되고 만다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-39작품명 : 개정판 | 엘리베이터에 낀 그 남자는 어떻게 되었나      작가명 : 김영하
+        (?,?,?,?,?,?,?,default)
+39작품명 : 애거서 크리스티 에디터스 초이스 세트      작가명 : 애거서 크리스티 	내용 : 
+<애거서 크리스티 에디터스 초이스 세트> 애거서 크리스티의 작품들 중 최고의 작품들만을 엄선한 '애거서 크리스티 에디터스 초이스' 시리즈. 기네스 기록에 따르면, 애거서 크리스티는 말 그대로 시대를 풍미한 베스트셀러 작가이다. 애거서 크리스티는 100권이 넘는 장편 소설과 단편집과 희곡을 썼으며, 그녀의 작품들은 100개가 넘는 언어로 번역되어 전 세계적으로 거의 40억 부가 넘게 팔려 나갔다.
+
+애거서 크리스티 에디터스 초이스는 「가디언」에서 선정한 애거서 크리스티 베스트 10 목록 및 전 세계적인 애거서 크리스티의 판매고와 애거서 크리스티 본인이 직접 뽑은 자신이 가장 좋아하는 작품 목록 등을 고려하여, 그녀의 작품들 중에서도 인기와 명성이 높은 작품들을 골라 선정하였다. 시리즈를 10권으로 제한하여 총 77권인 그녀의 전집에 비해 독자들의 접근성을 높였으며 새로이 현대적인 디자인을 입혔다.
+
+1권 : 그리고 아무도 없었다
+2권 : 오리엔트 특급 살인
+3권 : 0시를 향하여
+4권 : 애크로이드 살인 사건
+5권 : 살인을 예고합니다
+6권 : 비뚤어진 집
+7권 : 나일 강의 죽음
+8권 : 서재의 시체
+9권 : 다섯 마리 아기 돼지
+10권 : ABC 살인 사건
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-40작품명 : 뜨거운 피      작가명 : 김언수
+        (?,?,?,?,?,?,?,default)
+40작품명 : 맛      작가명 : 로알드 달 	내용 : 
+<맛> 에드거 엘런 포 상, 전미 미스터리 작가상 수상에 빛나는 최고의 이야기꾼
+
+시끄럽고 대담하고 뻔뻔스러운 이야기 저 너머에서
+빙그레 웃으며 기어이 독자와의 내기에서 이기고 마는 작가
+
+우리 시대의 가장 영향력 있고 가장 널리 읽히는 작가 _타임스
+
+세대를 뛰어넘는 영원한 이야기꾼 로알드 달의 베스트 소설집
+‘에드거 엘런 포’ 상, 전미 미스터리 작가상 수상에 빛나는 최고의 이야기꾼 로알드 달의 베스트 소설집이 재출간되었다. 올해로 서거 30주년을 맞은 로알드 달은 2000년 ‘세계 책의 날’에 전 세계 사람들이 가장 사랑하는 작가로 선정되었고 시간이 지날수록 세대를 뛰어넘는 영원한 이야기꾼으로 자리매김하고 있다. 모두 3권으로 출간되는 “로알드 달 소설”은 그의 베스트셀러 『응답 바람Over to You』 『당신을 닮은 사람Someone Like You』 『키스 키스Kiss Kiss』 『스위치 비치Switch Bitch』에서 엄선해 묶은 스물다섯 편의 이야기는 기괴하면서도 중독성 있는 로알드 달의 소설 세계를 가장 잘 보여주는 작품들이다. 전 세계 어린이들의 사랑을 받으며 영화로도 제작된 『찰리와 초콜릿 공장』 『마틸다』와 같은 동화에서 로알드 달이 보여준 기묘하고 비범한 인물과 예측 불가능한 전개는 그의 단편소설에서 본격적으로 빛을 발한다. 도박과 내기에 대한 집착, 속고 속이는 의뭉스러운 술수, 통념 밖의 기이한 목표를 향해 놀라운 집념을 발휘하는 인물 등을 통해 인간사의 미묘한 국면을 밀도 높게 몰아붙이는 그의 솜씨는 결말에서 으스스한 반전과 다층적인 유머를 선사하면서 정점에 달한다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-41작품명 : 고독사 워크숍      작가명 : 박지영
+        (?,?,?,?,?,?,?,default)
+41작품명 : 갈매기의 꿈 (완결판)      작가명 : 리처드 바크 	내용 : 
+<갈매기의 꿈 (완결판)> 1970년에 발표된 이래 전 세계 40여 개의 언어로 번역되어 4,000만 부 이상이 팔린 리처드 바크의 우화소설, 세대를 넘어 수많은 독자들에게 가슴 뭉클한 감동을 안겨준 최고의 베스트셀러 『갈매기의 꿈(Jonathan Livingston Seagull)』이 개정증보판으로 새롭게 번역 출간되었다.
+2003년 시인 류시화의 번역으로 국내에 처음 정식 출간되어 많은 사랑을 받아온 우화소설의 고전이 45년 만에 작가의 미공개 원고를 추가해 베테랑 전문번역가 공경희 씨의 언어로 옷을 갈아입고 완전히 새롭게 태어난 것이다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-42작품명 : 푸틴을 죽이는 완벽한 방법      작가명 : 김진명
+        (?,?,?,?,?,?,?,default)
+42작품명 : 로미오와 줄리엣      작가명 : 윌리엄 셰익스피어 	내용 : 
+<로미오와 줄리엣> 달빛 아래 주고받은 첫 키스와 사랑의 맹세, 살아 있는 죽음을 통해 도달하는 죽음을 넘어서는 사랑!
+셰익스피어가 빚어낸 순수한 열정의 비극, 그 사랑의 모순어법 
+
+셰익스피어의 대표적인 비극 『로미오와 줄리엣』은 집안 간의 반목으로 인해 비극적인 결말을 맞는 연인의 사랑을 그린 희곡이며, 그 극적인 구성과 아름다운 표현으로 청년 극작가였던 셰익스피어에게 커다란 명성을 가져다주었다. 또한 1597년 처음 출간된 이후, 『햄릿』과 함께 가장 많이 연극 무대에 오르는 셰익스피어의 작품으로 알려져 있다. 연극 외에도 음악, 미술, 영화, 뮤지컬, 오페라, 발레 등 다양한 형태로 공연되어 왔으며 ‘로미오와 줄리엣’은 운명적인 사랑에 빠진 연인의 대명사가 되었다. 민음사에서 출간한 『로미오와 줄리엣』은 기존에 번역된 ‘셰익스피어 4대 희극’과 『한여름 밤의 꿈』과 마찬가지로 연세대 최종철 교수가 셰익스피어의 원문에 충실하게 운문으로 번역하여 그 의미가 한층 더 깊다고 할 수 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-43작품명 : 아무도 아닌      작가명 : 황정은
+        (?,?,?,?,?,?,?,default)
+43작품명 : 북유럽신화      작가명 : 닐 게이먼 	내용 : 
+<북유럽신화> 
+
+37개국 출간 밀리언셀러
+아마존 선정 ‘올해의 책’
+
+“마블 영화팬이라면 반드시 이 책을 읽어라.
+마블 영화를 가장 재밌게 즐길 수 있는 방법이다.“ _아마존 독자
+
+전 세계 마블 팬들을 위한 스페셜 에디션 출간!
+
+이 시대 최고의 이야기꾼 닐 게이먼이 완성한
+세상에서 가장 재밌고 유익한 북유럽 신화
+
+지금 세상 사람들이 가장 열광하는 이야기는 무엇일까? 단언컨대 ‘마블 영화 시리즈’일 것이다. 남녀노소 가릴 것 없이 전 세계 어느 곳에서든 강력한 자신의 무기를 들고 우주를 날아다니는 히어로들을 통해 무한한 상상력과 재미, 감동에 흠뻑 빠져든 사람들을 쉽게 찾아볼 수 있다. 마블 영화 시리즈의 무엇이 이토록 많은 이들을 매혹시키는가? 그 열광과 매혹의 중심엔 ‘북유럽 신화’가 자리한다. 거대한 망치를 든 토르, 음험한 미소를 띤 로키, 한쪽 눈을 지혜와 바꾼 최고신 오딘, 아름다운 여신 프레이야…. 북유럽 신화에 등장하는 많은 신들이 곧 마블 히어로즈들의 원형이란 사실을 알고 나면, 마블 팬들의 영화를 보는 즐거움은 배가 되고, 지식은 더욱 풍요해진다. 그리하여 아마존 독자들은 이렇게 말한다. “마블 영화팬이라면 반드시 이 책을 읽어라. 이 책의 독서 경험이 곧 마블 영화를 가장 재밌게 즐길 수 있는 최고의 방법이다.”
+
+비단 마블 영화뿐 아니다. 북유럽 신화에 등장하는 많은 신들은 이미 우리 시대의 문화를 상징하는 아이콘으로 떠올라 있다. 지금껏 그리스·로마 신화에만 익숙했던 사람들에게 북유럽 신화는 새로운 역사와 상상력의 가능성을 열어준다. [뉴욕 타임스] [가디언] [워싱턴 포스트] [월 스트리트 저널] 등 글로벌 미디어들은 이 책 『북유럽 신화』에 대해 다음과 같이 격찬한다. “최고의 이야기꾼 닐 게이먼이 쓴 이 책을 우리가 읽어야 하는 이유는 명확하다. 북유럽 신화를 모른다는 것은, 인류 역사의 절반을 모르는 것과 같기 때문이다.”
+
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
-44작품명 : 나목      작가명 : 박완서
+        (?,?,?,?,?,?,?,default)
+44작품명 : 셰익스피어 4대 비극+소네트 세트      작가명 : 윌리엄 셰익스피어 	내용 : 
+<셰익스피어 4대 비극+소네트 세트> 지금 이 순간에도 누군가 재해석하며, 누군가 연기한다
+덴마크 왕자 햄릿, 그 영원한 모나리자
+
+'서라, 거기 누구냐?' 라는 정체성에 대한 질문으로 시작되어 '나는 덴마크인 햄릿이다' 를 거쳐 '살아 있었다면, 훌륭한 국왕이 되었을 인물' 이라는 규명을 맺는 셰익스피어의 희곡 햄릿이다. 서구 문학사의 모나리자 혹은 스핑크스라 불릴 만큼 존재와 삶의 여러 문제들을 의문문 형식으로 제기한 햄릿은 존재 탐구의 여정을 죽음, 도덕적 양심, 복수와 그 정당성, 인간의 의지와 운명의 힘, 부권과 여성의 성적 억압 등 다양한 문제들을 동반하며 제시한다. 셰익스피어는 언어와 독자의 상상력으로 하나의 세계를 만들어 감으로써 그 해답의 가능성을 보여준 작가이다. 지금 이 순간에도 '햄릿'이 누군가에 의해 재해석되고 공연되고 있는 이유는 바로 여기에 있을 것이다. 이 책은 희곡 햄릿의 한국어판으로, 손안에 들어오는 사이즈로 휴대가 용이하도록 제작했으며 총 5막으로 구성되어 있다.
 Hibernate: 
     insert 
     into
-        book
-        (author,content,subject,id) 
+        foreign_book
+        (author,content,subject,win_hugo,win_hugo_year,win_nobel,win_nobel_year,id) 
     values
-        (?,?,?,default)
+        (?,?,?,?,?,?,?,default)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

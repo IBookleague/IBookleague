@@ -4,7 +4,7 @@
 
     <div class="d-flex justify-content-center">
         <div class="my-3" style="border-radius: 1rem;">
-            <h1 class="bd-title mb-0 text-light">한국문학랭킹</h1>
+            <h1 class="bd-title mb-0 text-light">노벨문학상</h1>
         </div>
     </div>
 
@@ -15,18 +15,19 @@
             <th>번호</th>
             <th>제목</th>
             <th>저자</th>
-            <th>퍙점 평균</th>
+            <th>평점 평균</th>
+<!--            <th>삭제</th>-->
         </tr>
         </thead>
         <tbody>
-        <tr th:each="book, loop : ${bookList}">
+        <tr th:each="foreignBook, loop : ${winNobelBooks}">
             <td class="text-light" th:text="${loop.count}"></td>
             <td>
-                <a th:href="@{|/ibookleague/book/detail/${book.id}|}" th:text="${book.subject}"></a>
+                <a th:href="@{|/ibookleague/foreignbook/detail/${foreignBook.id}|}" th:text="${foreignBook.subject}"></a>
             </td>
-            <td class="text-light" th:text="${book.author}"></td>
-            <td class="text-light" th:text="${book.calculateAvg()}"></td>
-<!--            <td href="javascript:void(0);" th:data-uri="@{|/ibookleague/book/delete/${book.id}|}"-->
+            <td class="text-light" th:text="${foreignBook.author}"></td>
+            <td class="text-light" th:text="${foreignBook.calculateAvg()}"></td>
+<!--            <td href="javascript:void(0);" th:data-uri="@{|/ibookleague/foreignbook/delete/${foreignBook.id}|}"-->
 <!--                class="delete btn btn-sm btn-outline-secondary" th:text="삭제"></td>-->
         </tr>
         </tbody>

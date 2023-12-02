@@ -6,6 +6,7 @@ import com.ibookleague.foreignbook.domain.ForeignBook;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,11 +16,23 @@ public class ForeignBookService {
 
     private final ForeignBookRepository foreignBookRepository;
 
-    public List<ForeignBook> getList()
+    public List<ForeignBook> getNobelList()
     {
-        return this.foreignBookRepository.findAll();
+        List<ForeignBook> winNobelBooks = foreignBookRepository.findByWinNobel(true);
+        return winNobelBooks;
     }
 
+    public List<ForeignBook> getHugoList()
+    {
+        List<ForeignBook> winHugoBooks = foreignBookRepository.findByWinHugo(true);
+        return winHugoBooks;
+    }
+
+    public List<ForeignBook> getwinNobelFalseAndWinHugoFalseList()
+    {
+        List<ForeignBook> winNobelFalseAndWinHugoFalseBooks = foreignBookRepository.findByWinNobelFalseAndWinHugoFalse();
+        return winNobelFalseAndWinHugoFalseBooks;
+    }
     public ForeignBook getBook(Integer id)
     {
         Optional<ForeignBook> foreignBook = this.foreignBookRepository.findById(id);

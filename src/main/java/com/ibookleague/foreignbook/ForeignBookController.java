@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -26,13 +27,36 @@ public class ForeignBookController
     }
 
 
-    @GetMapping("/list")
+    @GetMapping("/ranking")
     public String list(Model model)
     {
-        List<ForeignBook> foreignBookList = this.foreignBookService.getList();
-        Collections.sort(foreignBookList, Comparator.comparing(ForeignBook::calculateAvg).reversed());
-        model.addAttribute("foreignBookList", foreignBookList);
+        List<ForeignBook> winNobelFalseAndWinHugoFalseBooks = this.foreignBookService.getwinNobelFalseAndWinHugoFalseList();
+        List<ForeignBook> winNobelBooks = this.foreignBookService.getNobelList();
+
+        // 새로운 리스트에 두 리스트의 모든 요소를 추가
+        List<ForeignBook> combinedList = new ArrayList<>(winNobelFalseAndWinHugoFalseBooks);
+        combinedList.addAll(winNobelBooks);
+        Collections.sort(combinedList, Comparator.comparing(ForeignBook::calculateAvg).reversed());
+        model.addAttribute("combinedList", combinedList);
         return "foreign_book_list";
+    }
+
+    @GetMapping("/nobelprize")
+    public String nobelPrize(Model model)
+    {
+        List<ForeignBook> winNobelBooks = this.foreignBookService.getNobelList();
+        Collections.sort(winNobelBooks, Comparator.comparing(ForeignBook::calculateAvg).reversed());
+        model.addAttribute("winNobelBooks", winNobelBooks);
+        return "nobelprize_list";
+    }
+
+    @GetMapping("/hugoaward")
+    public String hugoAward(Model model)
+    {
+        List<ForeignBook> winHugoBooks = this.foreignBookService.getHugoList();
+        Collections.sort(winHugoBooks, Comparator.comparing(ForeignBook::calculateAvg).reversed());
+        model.addAttribute("winHugoBooks", winHugoBooks);
+        return "hugoaward_list";
     }
 
     @GetMapping(value = "/detail/{id}")
