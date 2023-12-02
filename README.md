@@ -20,5 +20,5 @@ past
       - Selenium 사용
 
 
-* foreign_literary.xlsx 내용 변경
-* nobelprize.xlsx 생성
+*foreign_literary.xlsx 내용 변경
+*nobelprize.xlsx 생성
