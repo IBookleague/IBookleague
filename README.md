@@ -9,13 +9,13 @@ past
 
 # 12.02 Update
 
-# 외국문학 책 내용 추가 (content) 
+외국문학 책 내용 추가 (content) 
   - 책 제목에서 책 상세 url 파싱 -> 책 소개 파싱 (최대 17줄)
   - BeautifulSoup 사용
 
 
 
-# 노벨문학상 책 추가
+노벨문학상 책 추가
   - 노벨문학상은 나무위키에서 크롤링 -> 책 제목과 저자 담긴 csv 파일 생성 (nobel.csv)
     - BeautifulSoup 사용
 
