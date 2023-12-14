@@ -12,7 +12,7 @@
     <table class="my-3 table text-center">
         <thead class="table-light">
         <tr>
-            <th>번호</th>
+            <th>수상연도</th>
             <th>제목</th>
             <th>저자</th>
             <th>평점 평균</th>
@@ -21,7 +21,7 @@
         </thead>
         <tbody>
         <tr th:each="foreignBook, loop : ${winHugoBooks}">
-            <td class="text-light" th:text="${loop.count}"></td>
+            <td class="text-light" th:text="${foreignBook.winHugoYear}"></td>
             <td>
                 <a th:href="@{|/ibookleague/foreignbook/detail/${foreignBook.id}|}" th:text="${foreignBook.subject}"></a>
             </td>
