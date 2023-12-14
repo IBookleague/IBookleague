@@ -25,7 +25,12 @@ past
     - Selenium 사용
 
 
+# 12.15 Updata
 
+휴고상 책 추가
+  - csv파일 생성 (hugo.csv)
+  - 책 내용 존재하는 책들만 교보문고 크롤링 -> Selenium 이용
 
 *foreign_literary.xlsx 내용 변경
 *nobelprize.xlsx 생성
+*hugoprize.xlsx 생성
