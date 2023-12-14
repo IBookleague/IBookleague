@@ -22,4 +22,11 @@
 
 - 수정사항에 따른 html 수정
 
+
+12.15 Update
+- 휴고 문학상 추가
+  - testApplication에 데이터 추가
+
+- Awards 수상연도보이게 html 수정
+
 DB Foreign_Rate 먼저 밀고 Foreign_Book 밀어야 한다!
