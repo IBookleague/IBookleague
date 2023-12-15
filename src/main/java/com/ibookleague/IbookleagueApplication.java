@@ -9,4 +9,3 @@ public class IbookleagueApplication {
 		SpringApplication.run(IbookleagueApplication.class, args);
 	}
 }
-

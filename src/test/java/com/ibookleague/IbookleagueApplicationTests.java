@@ -29,7 +29,7 @@ class IbookleagueApplicationTests {
 		try
 		{
 
-			FileInputStream file = new FileInputStream("/Users/suyeon/Desktop/SpringProject/crawling/nobelprize.xlsx");
+			FileInputStream file = new FileInputStream("src/excel/nobelprize.xlsx");
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			int rowindex=0;
@@ -71,7 +71,7 @@ class IbookleagueApplicationTests {
 		try
 		{
 
-			FileInputStream file = new FileInputStream("/Users/suyeon/Desktop/SpringProject/crawling/hugoprize.xlsx");
+			FileInputStream file = new FileInputStream("src/excel/hugoprize.xlsx");
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			int rowindex=0;
@@ -113,7 +113,7 @@ class IbookleagueApplicationTests {
 		try
 		{
 
-			FileInputStream file = new FileInputStream("/Users/suyeon/Desktop/SpringProject/crawling/foreign_literary.xlsx");
+			FileInputStream file = new FileInputStream("src/excel/foreign_literary.xlsx");
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			int rowindex=0;
@@ -151,7 +151,7 @@ class IbookleagueApplicationTests {
 		try
 		{
 
-			FileInputStream file = new FileInputStream("/Users/suyeon/Desktop/SpringProject/crawling/korean_literary.xlsx");
+			FileInputStream file = new FileInputStream("src/excel/korean_literary.xlsx");
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			int rowindex=0;
