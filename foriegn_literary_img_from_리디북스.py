@@ -1,16 +1,18 @@
 from bs4 import BeautifulSoup
+from io import BytesIO
+import urllib.request
 import requests
 import pandas as pd
-import re
+from PIL import Image
 
 name_list = []
 author_list = []
 book_content_list = []
+img_list = []
 
 book_url = "https://ridibooks.com"
 
 for i in range(1,5):
-
     r = requests.get(f"https://ridibooks.com/category/bestsellers/102?page={i}&period=steady")
     soup = BeautifulSoup(r.text, 'html.parser')
     for j in range(1, 12):
@@ -19,18 +21,15 @@ for i in range(1,5):
         name_link = name.get('href')
         name_url = book_url + name_link
         book_r = requests.get(name_url)
-        soup2 = BeautifulSoup(book_r.text, 'html.parser')
-        content_lines = soup2.select_one('div#introduce_book.introduce_section.js_introduce_section').text.splitlines()
-        filtered_content_lines = [line for line in content_lines if '펼쳐보기' not in line]
-        content = "\n".join(filtered_content_lines[:17])
-        # for line in content_lines[:-1]:
-        #     content += line
-        # print(content)
-        book_name = name.text
-        name_list.append(book_name)
-        author_list.append(author)
-        book_content_list.append(content)
 
-raw_data = {'book_name' : name_list, 'author' : author_list, 'content' : book_content_list}
-raw_data = pd.DataFrame(raw_data)
-raw_data.to_excel(excel_writer='foreign_literary.xlsx')
+        # 이미지 찾기
+        html_source = book_r.text
+        soup_img = BeautifulSoup(html_source, 'html.parser')
+        div_ = soup_img.find("img", class_="thumbnail")
+        img_url = div_.get("src")
+
+        # 이미지 png 타입 변환 후 저장
+        img_url = "https:" + img_url
+        img_response = BytesIO(requests.get(img_url + 'png').content)
+        img_pil = Image.open(img_response)
+        img_pil.save(f"{name.text}.png")
