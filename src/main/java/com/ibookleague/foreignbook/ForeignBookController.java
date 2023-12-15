@@ -3,12 +3,18 @@ package com.ibookleague.foreignbook;
 
 import com.ibookleague.book.domain.Book;
 import com.ibookleague.foreignbook.domain.ForeignBook;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.net.MalformedURLException;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -73,4 +79,13 @@ public class ForeignBookController
         return "redirect:/ibookleague/foreignbook/list";
     }
 
+    @GetMapping("images/{filename}")
+    public ResponseEntity<Resource> showImages(@PathVariable String filename) throws MalformedURLException {
+        String path = "foreginBook_image/";
+        Resource resource = new ClassPathResource(path + filename + ".png");
+        HttpHeaders header = new HttpHeaders();
+        header.add("Content-type", "image/png");
+        return new ResponseEntity<Resource>(resource, header, HttpStatus.OK);
+
+    }
 }

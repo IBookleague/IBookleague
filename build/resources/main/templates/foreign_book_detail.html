@@ -6,6 +6,7 @@
         <h2 class="text-light" th:text="${foreignBook.subject}"></h2>
     </div>
 
+    <img th:src="|/ibookleague/foreignbook/images/${foreignBook.subject}|">
     <div class="my-3 d-flex justify-content-center text-light">
         <ul>
             <li th:text="'저자: ' + ${foreignBook.author}"></li>

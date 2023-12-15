@@ -3,7 +3,7 @@
 <div layout:fragment="content" class="container my-3">
 
     <div class="my-3"></div>
-
+    <img th:src="@{|/ibookleague/book/images/${book.subject}|}">
     <div class="my-3 d-flex justify-content-center">
         <h2 class="text-light" th:text="${book.subject}"></h2>
     </div>
