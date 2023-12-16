@@ -1,7 +1,5 @@
 # IBookLeague_Booklist
 
-Spring Project
-
 # Description
 사용자가 독서를 하기 전에 참고 하면 좋을 한국문학, 외국문학 순수 평점리스트를 확인할 수 있는 웹
 사용자는 회원가입 시 평점 및 리뷰를 등록할 수 있고
@@ -15,6 +13,8 @@ Spring Project
 # How To?
 1. 프로젝트를 실행하기에 앞서 반드시! testApplication의 test메서드들을 하나씩 실행해 작품 DB를 채워넣는 작업을 해야함!
 2. application을 실행해 로컬서버 작동 후 웹 확인 가능
+
+
 
 11.29 Update
 - 같은 사용자가 두번 이상 평점을 입력하려고 할 때 자바스크립트로 warning 표시
