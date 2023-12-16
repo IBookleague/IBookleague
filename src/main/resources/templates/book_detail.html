@@ -44,22 +44,23 @@
                 </div>
 
                 <!-- 평점 수정 -->
-                <i class="far fa-star" style="color: blue; font-size: 24px; margin-left: 10px;"></i>
-                <span data-bs-toggle="collapse" href="#modifyRateCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Modify Rate</span>
-                <div class="collapse multi-collapse" id="modifyRateCollapse">
-                    <div th:each="rate : ${book.rateList}" th:if="${#authentication.getPrincipal().getUserId() == rate.user}">
-                        <div class="card card-body bg-secondary text-light text-center">
-                            <i class="fas fa-star" style="color: blue; font-size: 30px"></i>
-                            <span class="star-text" th:text="${rate.rate}"></span>
-                            <strong class="text-warning">Modify Rate</strong>
-                            <form th:action="@{|/ibookleague/book/rate/modify/${rate.id}|}" method="post" class="d-flex align-items-center">
-                                <label for="newrate" class="form-label">Rate range</label><br>
-                                <input type="range" name="newrate" class="form-range" min="1" max="5" step="1" id="newrate">
-                                <input type="submit" value="Modify" class="btn btn-primary my-2">
-                            </form>
+                <div sec:authorize="isAuthenticated()">
+                    <i class="far fa-star" style="color: blue; font-size: 24px; margin-left: 10px;"></i>
+                    <span data-bs-toggle="collapse" href="#modifyRateCollapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Modify Rate</span>
+                    <div class="collapse multi-collapse" id="modifyRateCollapse">
+                        <div th:each="rate : ${book.rateList}" th:if="${#authentication.getPrincipal().getUserId() == rate.user}">
+                            <div class="card card-body bg-secondary text-light text-center">
+                                <i class="fas fa-star" style="color: blue; font-size: 30px"></i>
+                                <span class="star-text" th:text="${rate.rate}"></span>
+                                <strong class="text-warning">Modify Rate</strong>
+                                <form th:action="@{|/ibookleague/book/rate/modify/${rate.id}|}" method="post" class="d-flex align-items-center">
+                                    <label for="newrate" class="form-label">Rate range</label><br>
+                                    <input type="range" name="newrate" class="form-range" min="1" max="5" step="1" id="newrate">
+                                    <input type="submit" value="Modify" class="btn btn-primary my-2">
+                                </form>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
