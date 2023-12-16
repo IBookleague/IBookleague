@@ -1,5 +1,7 @@
 # IBookLeague_Booklist
 
+Spring Project
+
 11.29 Update
 - 같은 사용자가 두번 이상 평점을 입력하려고 할 때 자바스크립트로 warning 표시
 - 평점 수정 range 생성
@@ -29,4 +31,4 @@
 
 - Awards 수상연도보이게 html 수정
 
-DB Foreign_Rate 먼저 밀고 Foreign_Book 밀어야 한다!
+
