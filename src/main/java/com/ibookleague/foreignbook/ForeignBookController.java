@@ -1,7 +1,6 @@
 package com.ibookleague.foreignbook;
 
 
-import com.ibookleague.book.domain.Book;
 import com.ibookleague.foreignbook.domain.ForeignBook;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
