@@ -25,10 +25,9 @@
         <div class="mb-4 text-left">
           <p class="text-white"><strong>이메일:</strong> <span th:text="${user.email}"></span></p>
           <p class="text-white"><strong>닉네임:</strong> <span th:text="${user.username}"></span></p>
-          <!-- 추가적인 유저 정보를 출력할 수 있음 -->
         </div>
 
-        <!-- rates 리스트 출력 -->
+        <!-- 나의 국내 문학 평점 -->
         <div class="text-left">
           <h4 class="text-white">나의 국내문학 평점</h4>
           <ul class="list-group">
@@ -40,12 +39,37 @@
         </div>
         <hr>
 
+        <!-- 나의 해외 문학 평점 -->
         <div class="text-left">
           <h4 class="text-white">나의 해외문학 평점</h4>
           <ul class="list-group">
             <li th:each="rate : ${foreignRates}" class="list-group-item text-black-50">
               <a th:href="@{'/ibookleague/foreignbook/detail/' + ${rate.getForeignBook().getId()}}" th:text="${rate.getForeignBook().getSubject()}"></a>
               <span th:text="${rate.getStar()}"></span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+
+        <div class="text-left">
+          <h4 class="text-white">나의 해외문학 리뷰</h4>
+          <ul class="list-group">
+            <li th:each="review : ${foreignReviews}" class="list-group-item text-black-50">
+              <a th:href="@{'/ibookleague/foreignbook/detail/' + ${review.getForeignBook().getId()}}" th:text="${review.getForeignBook().getSubject()}"></a>
+              <br>
+              <span th:text="|-${review.getContent()}|"></span>
+            </li>
+          </ul>
+        </div>
+        <hr>
+
+        <div class="text-left">
+          <h4 class="text-white">나의 국내문학 리뷰</h4>
+          <ul class="list-group">
+            <li th:each="review : ${reviews}" class="list-group-item text-black-50">
+              <a th:href="@{'/ibookleague/book/detail/' + ${review.getBook().getId()}}" th:text="${review.getBook().getSubject()}"></a>
+              <br>
+              <span th:text="|-${review.getContent()}|"></span>
             </li>
           </ul>
         </div>

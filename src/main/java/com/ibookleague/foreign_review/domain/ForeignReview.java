@@ -1,6 +1,7 @@
 package com.ibookleague.foreign_review.domain;
 
 import com.ibookleague.foreignbook.domain.ForeignBook;
+import com.ibookleague.user.domain.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,4 +24,7 @@ public class ForeignReview {
     @ManyToOne
     private ForeignBook foreignBook;
 
+    @ManyToOne
+    @JoinColumn(name = "userId")
+    private User user;
 }

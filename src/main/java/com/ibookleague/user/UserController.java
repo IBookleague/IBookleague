@@ -2,8 +2,12 @@ package com.ibookleague.user;
 
 import com.ibookleague.foreign_rate.ForeignRateService;
 import com.ibookleague.foreign_rate.domain.ForeignRate;
+import com.ibookleague.foreign_review.ForeignReviewRepository;
+import com.ibookleague.foreign_review.domain.ForeignReview;
 import com.ibookleague.rate.RateService;
 import com.ibookleague.rate.domain.Rate;
+import com.ibookleague.review.ReviewRepository;
+import com.ibookleague.review.domain.Review;
 import com.ibookleague.user.domain.User;
 import com.ibookleague.user.dto.UserCreateForm;
 import jakarta.validation.Valid;
@@ -28,6 +32,8 @@ public class UserController {
     private final UserService userService;
     private final ForeignRateService foreignRateService;
     private final RateService rateService;
+    private final ReviewRepository reviewRepository;
+    private final ForeignReviewRepository foreignReviewRepository;
 
     @GetMapping("/signup")
     public String signup(UserCreateForm userCreateForm) {
@@ -81,9 +87,13 @@ public class UserController {
         User user = userService.getUser(authentication.getName());
         List<Rate> rates = rateService.getRateByUserId(user.getUserId());
         List<ForeignRate> foreignRates = foreignRateService.getRateByUserId(user.getUserId());
+        List<Review> reviews = reviewRepository.findAllByUser(user);
+        List<ForeignReview> foreignReviews = foreignReviewRepository.findAllByUser(user);
         model.addAttribute("user", user);
         model.addAttribute("rates", rates);
         model.addAttribute("foreignRates", foreignRates);
+        model.addAttribute("reviews", reviews);
+        model.addAttribute("foreignReviews", foreignReviews);
         return "my_page";
     }
 

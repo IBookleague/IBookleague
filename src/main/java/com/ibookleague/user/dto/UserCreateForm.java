@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserCreateForm {
+public class
+UserCreateForm {
 
     @NotEmpty(message="이메일은 필수항목입니다.")
     @Email

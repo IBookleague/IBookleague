@@ -67,6 +67,7 @@
     <div class="card my-3 bg-secondary" th:each="foreignReview : ${foreignBook.reviewList}">
         <div class="card-body">
             <div class="card-text text-dark" style="white-space: pre-line;" th:text="${foreignReview.content}"></div>
+            <div class="card-text text-black-50" sec:authorize="isAuthenticated()" th:if="${#authentication.getPrincipal().getUserId() == foreignReview.getUser().getUserId()}" th:text="|by : ${foreignReview.user.username}|"></div>
         </div>
     </div>
 

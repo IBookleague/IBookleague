@@ -73,6 +73,7 @@
     <div class="card my-3 bg-secondary" th:each="review : ${book.reviewList}">
         <div class="card-body">
             <div class="card-text text-dark" style="white-space: pre-line;" th:text="${review.content}"></div>
+            <div class="card-text text-black-50" sec:authorize="isAuthenticated()" th:if="${#authentication.getPrincipal().getUserId() == review.getUser().getUserId()}" th:text="|by : ${review.user.username}|"></div>
         </div>
     </div>
 
